@@ -22,7 +22,7 @@
 <h1 align="center"> EXTERNAL PLUGINS </h1>
 
 <p align="center">
-<a href="https://github.com/Tohidkhan6332/EXTERNAL-PLUGINS"><img title="Author" src="https://img.shields.io/badge/TOHID-AI-PLUGINS-black?style=for-the-badge&logo=Github"></a>
+<a href="https://github.com/Tohidkhan6332/EXTERNAL-PLUGINS"><img title="Author" src="https://img.shields.io/badge/TOHID-KHAN-PLUGINS-black?style=for-the-badge&logo=Github"></a>
 <p/>
 
   
