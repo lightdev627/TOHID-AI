@@ -8,9 +8,9 @@
   "stack": "container",
   "env": {
     "OWNERS": {
-      "description": "owner number",
+      "description": "917849917350",
       "required": true,
-      "value": "917849917350"
+      "value": ""
     },
     "BOTNAME": {
       "description": "Give your BOT a name",
@@ -30,7 +30,7 @@
     "MODE": {
       "description": "mode public or private",
       "required": true,
-      "value": "public"
+      "value": ""
     },
     "PREFIX": {
       "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
@@ -62,8 +62,38 @@
       "required": false,
       "value": "false"
     },
+    "HOBBIES": {
+      "description": "owners hobby for intro card",
+      "required": false,
+      "value": "CODING"
+    },
+    "LANGUAGE": {
+      "description": "owners native language for intro",
+      "required": false,
+      "value": "ENGLISH"
+    },
+    "OWNER_SKILLS": {
+      "description": "skills for intro",
+      "required": false,
+      "value": "JAVASCRIPT"
+    },
+    "OWNER_STATUS": {
+      "description": "current status for intro",
+      "required": false,
+      "value": "DEVELOPER"
+    },
+    "TIME_ZONE": {
+      "description": "your time zone",
+      "required": true,
+      "value": "Africa/Nairobi"
+    },
+    "OWNER_NAME": {
+      "description": "your owner Name",
+      "required": false,
+      "value": ""
+    },
      "REMOVEBG_KEY": {
-      "description": "your RemoveBg api key",
+      "description": "your Remove background api key",
       "required": false,
       "value": ""
     }
