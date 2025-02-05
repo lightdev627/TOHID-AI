@@ -50,27 +50,610 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 📜 *_Quote of the day: ${quote}_* 📜
 
-┏━💼 _User Info:_ 💼━┓
-┃ 🎩  *Owner:* ${OwnerName} 
-┃ 🦸  *Master:* ${author} 
-┃ 💎  *Diamonds:* ${diamond} 
-┃ 🏆  *Rank:* ${role}
-┃ 🎮  *XP:* ${exp} 
-┗━━━━━━━━━━━┛
-
-┏━━⏰ _Today's Sauce!_ ⏰━┓
-┃ 📆  *Date:* ${date} 
-┃ ⏲️  *Time:* ${wib} 
-┗━━━━━━━━━━━━━┛
-
-┏━━🤖 _BOT STATUS:_🤖━━┓
-┃ 🤡  *Bot Name:* ${botname} 
-┃ 💻  *Platform:* Linux 
-┃ 📣  *Prefix:* ${usedPrefix} 
-┃ 🕓  *Uptime:* ${uptime}
-┃ 💌  *Database:* ${rtotalreg} of ${totaluser} 
-┃ 📚  *Total Users:* ${totaluser} 
-┗━━━━━━━━━━━━━┛
+╭──❍「 *USER INFO* 」❍
+├ 🦸 *Owner:* ${OwnerName}
+├ 🏆 *Rank:* ${role}
+├ 🎮 *XP:* ${exp} 
+├ 🎩 *USER*:*${username}*
+╰─┬────❍
+╭─┴❍「 *BOT STATUS* 」❍
+├ 📆  *Date:* ${date}
+├ ⏲️  *Time:* ${wib}
+├  🤡  *Bot:* ${botname} 
+├ 📣  *Prefix:* ${usedPrefix} 
+├ 🕓  *Uptime:* ${uptime}
+├ 💌  *Database:* ${rtotalreg} of ${totaluser} 
+├ 📚  *Total Users:* ${totaluser}
+╰─┬────❍
+╭─┴❍「 *BOT MENU* 」❍
+◈ • *allmenu*
+◈ • *alive*
+◈ • *autoreact*
+◈ • *blocklist*
+◈ • *botinfo*
+◈ • *donate*
+◈ • *gita*
+◈ • *groups*
+◈ • *language*
+◈ • *listmenu*
+◈ • *listprem*
+◈ • *listrent*
+◈ • *menu*
+◈ • *menu2*
+◈ • *menu3*
+◈ • *menu4*
+◈ • *mrcs*
+◈ • *owner*
+◈ • *ping*
+◈ • *quran*
+◈ • *rentbot*
+◈ • *runtime*
+◈ • *server*
+◈ • *speedtest*
+◈ • *stoprent*
+◈ • *uptime*
+╰─┬────❍
+╭─┴❍「 *AI MENU* 」❍
+◈ • *ai*
+◈ • *blackbox*
+◈ • *blackpink*
+◈ • *bro*
+◈ • *chatgpt*
+◈ • *fact*
+◈ • *google*
+◈ • *googleit*
+◈ • *gimage*
+◈ • *gpt4*
+◈ • *travel*
+◈ • *why*
+╰─┬────❍
+╭─┴❍「 *TEXTPRO MENU* 」❍
+◈ • *advancedglow*
+◈ • *beach*
+◈ • *bpstyle*
+◈ • *cartoon*
+◈ • *clouds*
+◈ • *galaxy*
+◈ • *glossy*
+◈ • *lighteffect*
+◈ • *logomaker*
+◈ • *papercut*
+◈ • *pixelglitch*
+◈ • *texteffect*
+◈ • *writetext*
+╰─┬────❍
+╭─┴❍「 *IMAGEN MENU* 」❍
+◈ • *animefy*
+◈ • *cartoon*
+◈ • *dalle*
+◈ • *hercai-lexica*
+◈ • *imagev3*
+◈ • *lexica*
+◈ • *prodia*
+◈ • *raava*
+◈ • *shonin*
+◈ • *simurg*
+◈ • *v2beta*
+╰─┬────❍
+╭─┴❍「 *OWNER MENU* 」❍
+◈ • *addowner*
+◈ • *addprem*
+◈ • *addsudo*
+◈ • *afk*
+◈ • *allow*
+◈ • *allvars*
+◈ • *autoeract*
+◈ • *banchat*
+◈ • *ban*
+◈ • *banuser*
+◈ • *broadcast*
+◈ • *broadcastgc*
+◈ • *clearchat*
+◈ • *cleartmp*
+◈ • *delcmd*
+◈ • *delowner*
+◈ • *delprem*
+◈ • *delsudo*
+◈ • *enable*
+◈ • *fakereply*
+◈ • *fullpp*
+◈ • *getfile*
+◈ • *getmsg*
+◈ • *getplugin*
+◈ • *intro*
+◈ • *inspect*
+◈ • *join*
+◈ • *listban*
+◈ • *listcmd*
+◈ • *listplugins*
+◈ • *logout*
+◈ • *readviewonce*
+◈ • *remove*
+◈ • *restart*
+◈ • *save*
+◈ • *savecontact*
+◈ • *savefile*
+◈ • *setppbot*
+◈ • *setprefix*
+◈ • *setprivacy*
+◈ • *unban*
+◈ • *unbanuser*
+◈ • *unbanchat*
+◈ • *update*
+◈ • *var*
+◈ • *resetprefix*
+╰─┬────❍
+╭─┴❍「 *RANDOM PIC* 」❍
+◈ • *aesthetic*
+◈ • *antiwork*
+◈ • *bike*
+◈ • *blackpink3*
+◈ • *boneka*
+◈ • *car*
+◈ • *cat*
+◈ • *chinese*
+◈ • *cosplay2*
+◈ • *doggo*
+◈ • *girl*
+◈ • *hijab*
+◈ • *indo*
+◈ • *japanese*
+◈ • *justina*
+◈ • *kayes*
+◈ • *korean*
+◈ • *kpop*
+◈ • *malay*
+◈ • *malaysia*
+◈ • *notnot*
+◈ • *person*
+◈ • *profile2*
+◈ • *pubg*
+◈ • *random*
+◈ • *random2*
+◈ • *ryujin*
+◈ • *thai*
+◈ • *ulzzanggirl*
+◈ • *ulzzangboy*
+◈ • *vietnamese*
+◈ • *wallhp*
+◈ • *wallml*
+╰─┬────❍
+╭─┴❍「 *RANDOM VIDEO* 」❍
+◈ • *tiktokbocil*
+◈ • *tiktokgirl*
+◈ • *tiktokghea*
+◈ • *tiktokkayes*
+◈ • *tiktoknukhty*
+◈ • *tiktoknotnot*
+◈ • *tiktokpanrika*
+◈ • *tiktoksantuy*
+╰─┬────❍
+╭─┴❍「 *GROUP MENU* 」❍
+◈ • *add*
+◈ • *admins*
+◈ • *antilink*
+◈ • *delete*
+◈ • *demote*
+◈ • *disable*
+◈ • *enable*
+◈ • *group*
+◈ • *groupinfo*
+◈ • *kick*
+◈ • *link*
+◈ • *mysn*
+◈ • *notify*
+◈ • *poll*
+◈ • *promote*
+◈ • *register*
+◈ • *resetlink*
+◈ • *setbye*
+◈ • *setdesc*
+◈ • *setname*
+◈ • *setpp*
+◈ • *setwelcome*
+◈ • *ship*
+◈ • *tagall*
+◈ • *totag*
+◈ • *warn*
+◈ • *warns*
+◈ • *unreg*
+◈ • *unwarn*
+◈ • *wyr*
+◈ • *toxic*
+◈ • *delwarn*
+◈ • *hidetag*
+╰─┬────❍
+╭─┴❍「 *DOWNLOAD M* 」❍
+◈ • *apkdl*
+◈ • *apksearch*
+◈ • *audio*
+◈ • *capcut*
+◈ • *dlstatus*
+◈ • *facebook*
+◈ • *gdrive*
+◈ • *gimage*
+◈ • *gitclone*
+◈ • *githubdl*
+◈ • *githubstalk*
+◈ • *igstory*
+◈ • *igstalk*
+◈ • *insta*
+◈ • *itunes*
+◈ • *likee*
+◈ • *mediafire*
+◈ • *mega*
+◈ • *npmstalk*
+◈ • *pinterest*
+◈ • *pinterest2*
+◈ • *play*
+◈ • *play2*
+◈ • *play5*
+◈ • *playstore*
+◈ • *playvid*
+◈ • *ringtone*
+◈ • *rnekos*
+◈ • *rwall*
+◈ • *swdl*
+◈ • *threads*
+◈ • *tiktok*
+◈ • *ttstalk*
+◈ • *twitter*
+◈ • *video*
+◈ • *wallpapers*
+◈ • *ytmp3*
+◈ • *ytmp4*
+◈ • *ytsearch*
+╰─┬────❍
+╭─┴❍「 *ECONOMY MENU* 」❍
+◈ • *addgold*
+◈ • *addxp*
+◈ • *adventure*
+◈ • *balance*
+◈ • *bank*
+◈ • *bet*
+◈ • *buyall*
+◈ • *buych*
+◈ • *claim/daily*
+◈ • *craft*
+◈ • *deposit*
+◈ • *give*
+◈ • *heal*
+◈ • *leaderboard*
+◈ • *levelup*
+◈ • *mine*
+◈ • *monthly*
+◈ • *opencrate*
+◈ • *rob*
+◈ • *sell*
+◈ • *shop*
+◈ • *todiamond*
+◈ • *tomoney*
+◈ • *transfer*
+◈ • *wallet*
+◈ • *weekly*
+◈ • *withdraw*
+╰─┬────❍
+╭─┴❍「 *FUN MENU* 」❍
+◈ • *alexa*
+◈ • *character*
+◈ • *dare*
+◈ • *flirt*
+◈ • *gay*
+◈ • *hack*
+◈ • *hornycard*
+◈ • *lolicon*
+◈ • *shayeri*
+◈ • *simpcard*
+◈ • *ship*
+◈ • *stupid*
+◈ • *truth*
+◈ • *waste*
+◈ • *ytcomment*
+╰─┬────❍
+╭─┴❍「 *REACTIONS M* 」❍
+◈ • *awoo*
+◈ • *bite*
+◈ • *blush*
+◈ • *bonk*
+◈ • *bully*
+◈ • *cringe*
+◈ • *cry*
+◈ • *cuddle*
+◈ • *dance*
+◈ • *glomp*
+◈ • *happy*
+◈ • *handhold*
+◈ • *highfive*
+◈ • *hug*
+◈ • *kill*
+◈ • *kiss*
+◈ • *lick*
+◈ • *nom*
+◈ • *poke*
+◈ • *pat*
+◈ • *smug*
+◈ • *slap*
+◈ • *wave*
+◈ • *wink*
+◈ • *yeet*
+╰─┬────❍
+╭─┴❍「 *ANIME MENU* 」❍
+◈ • *akira*
+◈ • *akiyama*
+◈ • *anna*
+◈ • *asuna*
+◈ • *ayuzawa*
+◈ • *boruto*
+◈ • *chiho*
+◈ • *chitoge*
+◈ • *couplepp*
+◈ • *deidara*
+◈ • *elaina*
+◈ • *emilia*
+◈ • *erza*
+◈ • *hestia*
+◈ • *hinata*
+◈ • *hornycard*
+◈ • *inori*
+◈ • *itachi*
+◈ • *kagura*
+◈ • *kaori*
+◈ • *keneki*
+◈ • *kotori*
+◈ • *loli*
+◈ • *madara*
+◈ • *mikasa*
+◈ • *minato*
+◈ • *miku*
+◈ • *naruto*
+◈ • *neko*
+◈ • *nezuko*
+◈ • *sagiri*
+◈ • *sakura*
+◈ • *sasuke*
+◈ • *toanime*
+◈ • *waifu*
+╰─┬────❍
+╭─┴❍「 *ANIME INFO* 」❍
+◈ • *anime akira*
+◈ • *anime akiyama*
+◈ • *anime anna*
+◈ • *anime asuna*
+◈ • *anime ayuzawa*
+◈ • *anime boruto*
+◈ • *anime chiho*
+◈ • *anime chitoge*
+◈ • *anime deidara*
+◈ • *anime elaina*
+◈ • *anime emilia*
+◈ • *anime erza*
+◈ • *anime hestia*
+◈ • *anime hinata*
+◈ • *anime inori*
+◈ • *anime isuzu*
+◈ • *anime itachi*
+◈ • *anime kagura*
+◈ • *anime kaori*
+◈ • *anime keneki*
+◈ • *anime kotori*
+◈ • *anime loli*
+◈ • *anime madara*
+◈ • *anime mikasa*
+◈ • *anime minato*
+◈ • *anime miku*
+◈ • *anime naruto*
+◈ • *anime neko*
+◈ • *anime nezuko*
+◈ • *anime sakura*
+◈ • *anime sagiri*
+◈ • *anime sasuke*
+◈ • *anime waifu*
+╰─┬────❍
+╭─┴❍「 *GAME MENU* 」❍
+◈ • *casino*
+◈ • *chess*
+◈ • *cock-fight*
+◈ • *delttt*
+◈ • *fhint*
+◈ • *guessflag*
+◈ • *math*
+◈ • *math answer*
+◈ • *ppt*
+◈ • *roulette*
+◈ • *slot*
+◈ • *tictactoe*
+╰─┬────❍
+╭─┴❍「 *STICKER MENU* 」❍
+◈ • *attp*
+◈ • *attp2*
+◈ • *attp3*
+◈ • *emojimix*
+◈ • *getsticker*
+◈ • *quote*
+◈ • *quoted*
+◈ • *rc*
+◈ • *scircle*
+◈ • *s*
+◈ • *smaker*
+◈ • *smeme*
+◈ • *stickers*
+◈ • *take*
+◈ • *tenor*
+◈ • *tgsticker*
+◈ • *toimg*
+◈ • *tovid*
+◈ • *trigger*
+◈ • *ttp*
+◈ • *ttp2*
+╰─┬────❍
+╭─┴❍「 *TOOLS MENU* 」❍
+◈ • *android*
+◈ • *autosticker*
+◈ • *base64*
+◈ • *calc*
+◈ • *carbon*
+◈ • *checkmail*
+◈ • *course*
+◈ • *define*
+◈ • *element*
+◈ • *enhance*
+◈ • *fancy*
+◈ • *filelength*
+◈ • *google*
+◈ • *googleit*
+◈ • *happymod*
+◈ • *imdb*
+◈ • *itunes*
+◈ • *linux*
+◈ • *lyrics*
+◈ • *nowa*
+◈ • *pokedex*
+◈ • *qrmaker*
+◈ • *quote*
+◈ • *readmore*
+◈ • *readqr*
+◈ • *readvo*
+◈ • *reddit*
+◈ • *removebg*
+◈ • *remini*
+◈ • *ssweb*
+◈ • *styletext*
+◈ • *technews*
+◈ • *tinyurl*
+◈ • *tocartoon*
+◈ • *topdf*
+◈ • *tourl*
+◈ • *trace*
+◈ • *translate*
+◈ • *true*
+◈ • *wa*
+◈ • *weather*
+◈ • *whatmusic*
+◈ • *wattpad*
+◈ • *wikipedia*
+╰─┬────❍
+╭─┴❍「 *AUDIO EDITOR* 」❍
+◈ • *bass*
+◈ • *blown*
+◈ • *chipmunk*
+◈ • *deep*
+◈ • *earrape*
+◈ • *fast*
+◈ • *nightcore*
+◈ • *reverse*
+◈ • *robot*
+◈ • *slow*
+◈ • *smooth*
+◈ • *squirrel*
+◈ • *tupai*
+╰─┬────❍
+╭─┴❍「 *NSFW MENU* 」❍
+ ◈ • *genshin*
+ ◈ • *swimsuit*
+ ◈ • *schoolswimsuit*
+ ◈ • *white*
+ ◈ • *barefoot*
+ ◈ • *touhou*
+ ◈ • *gamecg*
+ ◈ • *hololive*
+ ◈ • *uncensored*
+ ◈ • *sunglasses*
+ ◈ • *glasses*
+ ◈ • *weapon*
+ ◈ • *shirtlift*
+ ◈ • *chain*
+ ◈ • *fingering*
+ ◈ • *flatchest*
+ ◈ • *torncloth*
+ ◈ • *bondage*
+ ◈ • *demon*
+ ◈ • *wet*
+ ◈ • *pantypull*
+ ◈ • *headdress*
+ ◈ • *headphone*
+ ◈ • *tie*
+ ◈ • *anusview*
+ ◈ • *shorts*
+ ◈ • *stokings*
+ ◈ • *topless*
+ ◈ • *beach*
+ ◈ • *bunnygirl*
+ ◈ • *bunnyear*
+ ◈ • *idol*
+ ◈ • *vampire*
+ ◈ • *gun*
+ ◈ • *maid*
+ ◈ • *bra*
+ ◈ • *nobra*
+ ◈ • *bikini*
+ ◈ • *whitehair*
+ ◈ • *blonde*
+ ◈ • *pinkhair*
+ ◈ • *bed*
+ ◈ • *ponytail*
+ ◈ • *nude*
+ ◈ • *dress*
+ ◈ • *underwear*
+ ◈ • *foxgirl*
+ ◈ • *uniform*
+ ◈ • *skirt*
+ ◈ • *sex*
+ ◈ • *sex2*
+ ◈ • *sex3*
+ ◈ • *breast*
+ ◈ • *twintail*
+ ◈ • *spreadpussy*
+ ◈ • *tears*
+ ◈ • *seethrough*
+ ◈ • *breasthold*
+ ◈ • *drunk*
+ ◈ • *fateseries*
+ ◈ • *spreadlegs*
+ ◈ • *openshirt*
+ ◈ • *headband*
+ ◈ • *food*
+ ◈ • *close*
+ ◈ • *tree*
+ ◈ • *nipples*
+ ◈ • *erectnipples*
+ ◈ • *horns*
+ ◈ • *greenhair*
+ ◈ • *wolfgirl*
+ ◈ • *catgirl*
+ ◈ • *nsfw*
+ ◈ • *ass*
+ ◈ • *boobs*
+ ◈ • *lesbian*
+ ◈ • *pussy*
+ ◈ • *pack*
+╰─┬────❍
+╭─┴❍「 *MAKER MENU* 」❍
+◈ • *blur*
+◈ • *difuminar2*
+◈ • *enhance*
+◈ • *gfx1*
+◈ • *gfx10*
+◈ • *gfx11*
+◈ • *gfx12*
+◈ • *gfx2*
+◈ • *gfx3*
+◈ • *gfx4*
+◈ • *gfx5*
+◈ • *gfx6*
+◈ • *gfx7*
+◈ • *gfx8*
+◈ • *gfx9*
+◈ • *hornycard*
+◈ • *hornylicense*
+◈ • *itssostupid*
+◈ • *iss*
+◈ • *lolicon*
+◈ • *logololi*
+◈ • *simpcard*
+◈ • *stupid*
+◈ • *tweet <comment>*
+◈ • *ytcomment <comment>*
+╰──『 *TOHID-AI* 』─❍
 
 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
 `
@@ -80,7 +663,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 }
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['menu4', 'help4']
+handler.command = ['menu4', 'help4', 'allmenu', 'fullmenu']
 
 export default handler
 function clockString(ms) {
