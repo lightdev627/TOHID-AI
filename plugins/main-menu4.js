@@ -51,20 +51,20 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 📜 *_Quote of the day: ${quote}_* 📜
 
 ╭──❍「 *USER INFO* 」❍
-├ 🦸 *Owner:* ${OwnerName}
-├ 🏆 *Rank:* ${role}
-├ 🎮 *XP:* ${exp} 
-├ 🎩 *USER*:*${username}*
-╰─┬────❍
+├• 🦸 *Owner:* ${OwnerName}
+├• 🏆 *Rank:* ${role}
+├• 🎮 *XP:* ${exp} 
+├• 🎩 *USER*:${username}
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *BOT STATUS* 」❍
-├ 📆  *Date:* ${date}
-├ ⏲️  *Time:* ${wib}
-├  🤡  *Bot:* ${botname} 
-├ 📣  *Prefix:* ${usedPrefix} 
-├ 🕓  *Uptime:* ${uptime}
-├ 💌  *Database:* ${rtotalreg} of ${totaluser} 
-├ 📚  *Total Users:* ${totaluser}
-╰─┬────❍
+├• 📆  *Date:* ${date}
+├• ⏲️  *Time:* ${wib}
+├• 🤡  *Bot:* ${botname} 
+├• 📣  *Prefix:* ${usedPrefix} 
+├• 🕓  *Uptime:* ${uptime}
+├• 💌  *Database:* ${rtotalreg} of ${totaluser} 
+├• 📚  *Total Users:* ${totaluser}
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *BOT MENU* 」❍
 ◈ • *allmenu*
 ◈ • *alive*
@@ -92,7 +92,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *speedtest*
 ◈ • *stoprent*
 ◈ • *uptime*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *AI MENU* 」❍
 ◈ • *ai*
 ◈ • *blackbox*
@@ -106,7 +106,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *gpt4*
 ◈ • *travel*
 ◈ • *why*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *TEXTPRO MENU* 」❍
 ◈ • *advancedglow*
 ◈ • *beach*
@@ -121,7 +121,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *pixelglitch*
 ◈ • *texteffect*
 ◈ • *writetext*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *IMAGEN MENU* 」❍
 ◈ • *animefy*
 ◈ • *cartoon*
@@ -134,7 +134,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *shonin*
 ◈ • *simurg*
 ◈ • *v2beta*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *OWNER MENU* 」❍
 ◈ • *addowner*
 ◈ • *addprem*
@@ -182,7 +182,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *update*
 ◈ • *var*
 ◈ • *resetprefix*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *RANDOM PIC* 」❍
 ◈ • *aesthetic*
 ◈ • *antiwork*
@@ -217,7 +217,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *vietnamese*
 ◈ • *wallhp*
 ◈ • *wallml*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *RANDOM VIDEO* 」❍
 ◈ • *tiktokbocil*
 ◈ • *tiktokgirl*
@@ -227,7 +227,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *tiktoknotnot*
 ◈ • *tiktokpanrika*
 ◈ • *tiktoksantuy*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *GROUP MENU* 」❍
 ◈ • *add*
 ◈ • *admins*
@@ -262,7 +262,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *toxic*
 ◈ • *delwarn*
 ◈ • *hidetag*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *DOWNLOAD M* 」❍
 ◈ • *apkdl*
 ◈ • *apksearch*
@@ -303,7 +303,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *ytmp3*
 ◈ • *ytmp4*
 ◈ • *ytsearch*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *ECONOMY MENU* 」❍
 ◈ • *addgold*
 ◈ • *addxp*
@@ -332,7 +332,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *wallet*
 ◈ • *weekly*
 ◈ • *withdraw*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *FUN MENU* 」❍
 ◈ • *alexa*
 ◈ • *character*
@@ -349,7 +349,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *truth*
 ◈ • *waste*
 ◈ • *ytcomment*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *REACTIONS M* 」❍
 ◈ • *awoo*
 ◈ • *bite*
@@ -376,7 +376,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *wave*
 ◈ • *wink*
 ◈ • *yeet*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *ANIME MENU* 」❍
 ◈ • *akira*
 ◈ • *akiyama*
@@ -413,7 +413,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *sasuke*
 ◈ • *toanime*
 ◈ • *waifu*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *ANIME INFO* 」❍
 ◈ • *anime akira*
 ◈ • *anime akiyama*
@@ -448,7 +448,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *anime sagiri*
 ◈ • *anime sasuke*
 ◈ • *anime waifu*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *GAME MENU* 」❍
 ◈ • *casino*
 ◈ • *chess*
@@ -462,7 +462,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *roulette*
 ◈ • *slot*
 ◈ • *tictactoe*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *STICKER MENU* 」❍
 ◈ • *attp*
 ◈ • *attp2*
@@ -485,7 +485,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *trigger*
 ◈ • *ttp*
 ◈ • *ttp2*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *TOOLS MENU* 」❍
 ◈ • *android*
 ◈ • *autosticker*
@@ -531,7 +531,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *whatmusic*
 ◈ • *wattpad*
 ◈ • *wikipedia*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *AUDIO EDITOR* 」❍
 ◈ • *bass*
 ◈ • *blown*
@@ -546,87 +546,87 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *smooth*
 ◈ • *squirrel*
 ◈ • *tupai*
-╰─┬────❍
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *NSFW MENU* 」❍
- ◈ • *genshin*
- ◈ • *swimsuit*
- ◈ • *schoolswimsuit*
- ◈ • *white*
- ◈ • *barefoot*
- ◈ • *touhou*
- ◈ • *gamecg*
- ◈ • *hololive*
- ◈ • *uncensored*
- ◈ • *sunglasses*
- ◈ • *glasses*
- ◈ • *weapon*
- ◈ • *shirtlift*
- ◈ • *chain*
- ◈ • *fingering*
- ◈ • *flatchest*
- ◈ • *torncloth*
- ◈ • *bondage*
- ◈ • *demon*
- ◈ • *wet*
- ◈ • *pantypull*
- ◈ • *headdress*
- ◈ • *headphone*
- ◈ • *tie*
- ◈ • *anusview*
- ◈ • *shorts*
- ◈ • *stokings*
- ◈ • *topless*
- ◈ • *beach*
- ◈ • *bunnygirl*
- ◈ • *bunnyear*
- ◈ • *idol*
- ◈ • *vampire*
- ◈ • *gun*
- ◈ • *maid*
- ◈ • *bra*
- ◈ • *nobra*
- ◈ • *bikini*
- ◈ • *whitehair*
- ◈ • *blonde*
- ◈ • *pinkhair*
- ◈ • *bed*
- ◈ • *ponytail*
- ◈ • *nude*
- ◈ • *dress*
- ◈ • *underwear*
- ◈ • *foxgirl*
- ◈ • *uniform*
- ◈ • *skirt*
- ◈ • *sex*
- ◈ • *sex2*
- ◈ • *sex3*
- ◈ • *breast*
- ◈ • *twintail*
- ◈ • *spreadpussy*
- ◈ • *tears*
- ◈ • *seethrough*
- ◈ • *breasthold*
- ◈ • *drunk*
- ◈ • *fateseries*
- ◈ • *spreadlegs*
- ◈ • *openshirt*
- ◈ • *headband*
- ◈ • *food*
- ◈ • *close*
- ◈ • *tree*
- ◈ • *nipples*
- ◈ • *erectnipples*
- ◈ • *horns*
- ◈ • *greenhair*
- ◈ • *wolfgirl*
- ◈ • *catgirl*
- ◈ • *nsfw*
- ◈ • *ass*
- ◈ • *boobs*
- ◈ • *lesbian*
- ◈ • *pussy*
- ◈ • *pack*
-╰─┬────❍
+◈ • *genshin*
+◈ • *swimsuit*
+◈ • *schoolswimsuit*
+◈ • *white*
+◈ • *barefoot*
+◈ • *touhou*
+◈ • *gamecg*
+◈ • *hololive*
+◈ • *uncensored*
+◈ • *sunglasses*
+◈ • *glasses*
+◈ • *weapon*
+◈ • *shirtlift*
+◈ • *chain*
+◈ • *fingering*
+◈ • *flatchest*
+◈ • *torncloth*
+◈ • *bondage*
+◈ • *demon*
+◈ • *wet*
+◈ • *pantypull*
+◈ • *headdress*
+◈ • *headphone*
+◈ • *tie*
+◈ • *anusview*
+◈ • *shorts*
+◈ • *stokings*
+◈ • *topless*
+◈ • *beach*
+◈ • *bunnygirl*
+◈ • *bunnyear*
+◈ • *idol*
+◈ • *vampire*
+◈ • *gun*
+◈ • *maid*
+◈ • *bra*
+◈ • *nobra*
+◈ • *bikini*
+◈ • *whitehair*
+◈ • *blonde*
+◈ • *pinkhair*
+◈ • *bed*
+◈ • *ponytail*
+◈ • *nude*
+◈ • *dress*
+◈ • *underwear*
+◈ • *foxgirl*
+◈ • *uniform*
+◈ • *skirt*
+◈ • *sex*
+◈ • *sex2*
+◈ • *sex3*
+◈ • *breast*
+◈ • *twintail*
+◈ • *spreadpussy*
+◈ • *tears*
+◈ • *seethrough*
+◈ • *breasthold*
+◈ • *drunk*
+◈ • *fateseries*
+◈ • *spreadlegs*
+◈ • *openshirt*
+◈ • *headband*
+◈ • *food*
+◈ • *close*
+◈ • *tree*
+◈ • *nipples*
+◈ • *erectnipples*
+◈ • *horns*
+◈ • *greenhair*
+◈ • *wolfgirl*
+◈ • *catgirl*
+◈ • *nsfw*
+◈ • *ass*
+◈ • *boobs*
+◈ • *lesbian*
+◈ • *pussy*
+◈ • *pack*
+╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *MAKER MENU* 」❍
 ◈ • *blur*
 ◈ • *difuminar2*
@@ -653,7 +653,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *stupid*
 ◈ • *tweet <comment>*
 ◈ • *ytcomment <comment>*
-╰──『 *TOHID-AI* 』─❍
+╰───★─☆─♪♪─❍
 
 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
 `
@@ -674,7 +674,7 @@ function clockString(ms) {
 }
 
 function ucapan() {
-  const timeZone = process.env.TIME_ZONE || 'Asia/Karachi';
+  const timeZone = process.env.TIME_ZONE || 'Asia/Kolkata';
   const time = moment.tz(timeZone).format('HH')
   let res = 'happy early in the day☀️'
   if (time >= 4) {

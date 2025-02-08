@@ -41,45 +41,54 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 🚀 *_Buckle up ${name}, ${greeting}! We're going on an adventure!_* 🚀
 📋 *_Quote of the day: ${quote}_* 📋
-◈┏━⟪ *INFO* ⟫━━⦿⦿
-◈┃• *OWNER*:*${OwnerName}*
-◈┃• *USER*:*${username}*
-◈┃• *BOT*:*${BOTNAME}*
-◈┃• *VERSION*:*4.0.0*
-◈┃• *TIME*: *${wib}*
-◈┗━♪♪━★━☆━━⦿⦿
-◈┏━⟪ *MAIN* ⟫━━⦿⦿
-◈┃• *aimenu*
-◈┃• *aeditor*
-◈┃• *animemenu*
-◈┃• *autoreact*
-◈┃• *botmenu*
-◈┃• *dlmenu*
-◈┃• *economy*
-◈┃• *enable*
-◈┃• *fancy*
-◈┃• *funmenu*
-◈┃• *gamesmenu*
-◈┃• *groupmenu*
-◈┃• *imagen*
-◈┃• *infoanime*
-◈┃• *listmenu*
-◈┃• *listplugin*
-◈┃• *logomenu*
-◈┃• *makermenu*
-◈┃• *menu*
-◈┃• *menu3*
-◈┃• *menu4*
-◈┃• *nsfwmenu*
-◈┃• *randompic*
-◈┃• *randomvid*
-◈┃• *reactions*
-◈┃• *stickermenu*
-◈┃• *textpro*
-◈┃• *toolsmenu*
-◈┃• *ownermenu*
-◈┃• *setprivacy*
-◈┗━♪♪━★━☆━━⦿⦿
+◈╭──❍「 *USER INFO* 」❍
+◈├• 🦸 *Owner:* ${OwnerName}
+◈├• 🏆 *Rank:* ${role}
+◈├• 🎮 *XP:* ${exp} 
+◈├• 🎩 *USER*:${username}
+◈╰─┬─★─☆──♪♪─❍
+◈╭─┴❍「 *BOT STATUS* 」❍
+◈├• 📆  *Date:* ${date}
+◈├• ⏲️  *Time:* ${wib}
+◈├• 🤡  *Bot:* ${botname} 
+◈├• 📣  *Prefix:* ${usedPrefix} 
+◈├• 🕓  *Uptime:* ${uptime}
+◈├• 💌  *Database:* ${rtotalreg} of ${totaluser} 
+◈├• 📚  *Total Users:* ${totaluser}
+◈╰─┬─★─☆──♪♪─❍
+◈╭─┴❍「 *MAIN MENU* 」❍
+◈├• *allmenu*
+◈├• *aimenu*
+◈├• *aeditor*
+◈├• *animemenu*
+◈├• *autoreact*
+◈├• *botmenu*
+◈├• *dlmenu*
+◈├• *economy*
+◈├• *enable*
+◈├• *fancy*
+◈├• *funmenu*
+◈├• *gamesmenu*
+◈├• *groupmenu*
+◈├• *imagen*
+◈├• *infoanime*
+◈├• *listmenu*
+◈├• *listplugin*
+◈├• *logomenu*
+◈├• *makermenu*
+◈├• *menu*
+◈├• *menu3*
+◈├• *menu4*
+◈├• *nsfwmenu*
+◈├• *randompic*
+◈├• *randomvid*
+◈├• *reactions*
+◈├• *stickermenu*
+◈├• *textpro*
+◈├• *toolsmenu*
+◈├• *ownermenu*
+◈├• *setprivacy*
+◈╰─♪♪─★─☆──♪♪─❍
 © *TOHID-AI*
 
 > 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
@@ -107,7 +116,7 @@ function clockString(ms) {
     return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
     
     function ucapan() {
-      const time = moment.tz('Asia/Karachi').format('HH')
+      const time = moment.tz('Asia/Kolkata').format('HH')
       let res = "happy early in the day☀️"
       if (time >= 4) {
         res = "Good Morning 🌄"
