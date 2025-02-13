@@ -108,19 +108,35 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *why*
 ╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *TEXTPRO MENU* 」❍
-◈ • *advancedglow*
-◈ • *beach*
-◈ • *bpstyle*
-◈ • *cartoon*
-◈ • *clouds*
+◈ • *3dsilver*
+◈ • *balon*
+◈ • *blackpink*
+◈ • *color*
+◈ • *circle*
+◈ • *cubic*
+◈ • *foggy*
 ◈ • *galaxy*
-◈ • *glossy*
-◈ • *lighteffect*
+◈ • *galaxy2*
+◈ • *gaming*
+◈ • *gold*
+◈ • *golden*
+◈ • *gsilver*
+◈ • *hacker*
+◈ • *jewel*
 ◈ • *logomaker*
+◈ • *matrix*
+◈ • *metal*
+◈ • *metallic*
+◈ • *mascot*
+◈ • *nigeria*
 ◈ • *papercut*
-◈ • *pixelglitch*
-◈ • *texteffect*
-◈ • *writetext*
+◈ • *sand*
+◈ • *splat*
+◈ • *snake*
+◈ • *star*
+◈ • *typo*
+◈ • *wgalaxy*
+◈ • *wings*
 ╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *IMAGEN MENU* 」❍
 ◈ • *animefy*
@@ -674,7 +690,7 @@ function clockString(ms) {
 }
 
 function ucapan() {
-  const timeZone = process.env.TIME_ZONE || 'Asia/Kolkata';
+  const timeZone = process.env.TIME_ZONE || 'Asia/Karachi';
   const time = moment.tz(timeZone).format('HH')
   let res = 'happy early in the day☀️'
   if (time >= 4) {

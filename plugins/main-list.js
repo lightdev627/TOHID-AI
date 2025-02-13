@@ -136,19 +136,35 @@ let handler = async (m, { conn, usedPrefix, command }) => {
  case 'textpro':
       lkr=`
 ╭───『 *TEXTPRO* 』─❍
-◈ • *advancedglow*
-◈ • *beach*
-◈ • *bpstyle*
-◈ • *cartoon*
-◈ • *clouds*
+◈ • *3dsilver*
+◈ • *balon*
+◈ • *blackpink*
+◈ • *color*
+◈ • *circle*
+◈ • *cubic*
+◈ • *foggy*
 ◈ • *galaxy*
-◈ • *glossy*
-◈ • *lighteffect*
+◈ • *galaxy2*
+◈ • *gaming*
+◈ • *gold*
+◈ • *golden*
+◈ • *gsilver*
+◈ • *hacker*
+◈ • *jewel*
 ◈ • *logomaker*
+◈ • *matrix*
+◈ • *metal*
+◈ • *metallic*
+◈ • *mascot*
+◈ • *nigeria*
 ◈ • *papercut*
-◈ • *pixelglitch*
-◈ • *texteffect*
-◈ • *writetext*
+◈ • *sand*
+◈ • *splat*
+◈ • *snake*
+◈ • *star*
+◈ • *typo*
+◈ • *wgalaxy*
+◈ • *wings*
 ╰──『 *TOHID-AI* 』─❍` //
  break
       case 'imagen':
