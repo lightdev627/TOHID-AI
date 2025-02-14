@@ -1,5 +1,5 @@
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
-  let te = `✳️ Select the language you want to use\n≡ *Available languages:*\n- es (Spanish)\n- en (English)\n- id (Indonesian)\n- pt (Portuguese)\n- ar (Arabic)\n\nExample: *${usedPrefix + command}* en\nHelp us translate the bot into your language\nt.me/GlobalBotInc`.trim();
+  let te = `✳️ Select the language you want to use\n≡ *Available languages:*\n- es (Spanish)\n- en (English)\n- id (Indonesian)\n- pt (Portuguese)\n- ar (Arabic)\n\nExample: *${usedPrefix + command}* en\nHelp us translate the bot into your language\nhttps://GitHub.com/tohidkhan6332`.trim();
   
   if (!text) throw te;
 
