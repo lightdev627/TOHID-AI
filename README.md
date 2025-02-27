@@ -77,7 +77,7 @@ To set up the TOHID-AI quickly, follow our detailed tutorial on YouTube:
 ## Deployment Options
 
 ### **Fork & Star the Repository**
-   - Start by forking this repository and giving it a ⭐ to support Globaltechinfo!
+   - Start by forking this repository and giving it a ⭐ to support Tohidkhan6332!
      To set up the TOHID-AI quickly, first fork this repository:
 [![TOHID AI Github Repo](https://img.shields.io/badge/Github-Fork%20Repo-red?style=for-the-badge&logo=Github)](https://github.com/Tohidkhan6332/TOHID-AI/fork)
 
