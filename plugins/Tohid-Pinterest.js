@@ -80,7 +80,7 @@ const handler = async (m, { conn, args }) => {
       const fileName = mediaData.title ? `${mediaData.title}.jpg` : 'media.jpg';
       const mimetype = 'image/jpeg';
 
-      await conn.sendFile(m.chat, mediaBuffer, fileName, '*𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 © 𝚄𝙻𝚃𝚁𝙰-𝙼𝙳*', m, false, { mimetype });
+      await conn.sendFile(m.chat, mediaBuffer, fileName, '*𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 © 𝚃𝙾𝙷𝙸𝙳-𝙰𝙸*', m, false, { mimetype });
       m.react('✅');
     } else {
       throw new Error('Unsupported media type');
