@@ -84,7 +84,7 @@ To set up the TOHID-AI quickly, follow our detailed tutorial on YouTube:
 ### **PAIRING CODE QR CODE**
    - Visit the bot site to generate a pairing code and get **SESSION ID.**
 
-     [![TOHID AI Github Repo](https://img.shields.io/badge/Whatsapp-Pair%20Code-green?style=for-the-badge&logo=Whatsapp)](https://tohid-md-web-pair-qr.onrender.com)
+     [![TOHID AI Github Repo](https://img.shields.io/badge/Whatsapp-Pair%20Code-green?style=for-the-badge&logo=Whatsapp)](https://tohid-ai-pair.onrender.com/)
 
 ### DEPLOY BY SESSION ID (WHATSAPP LOG WITH PAIR CODE)
 
