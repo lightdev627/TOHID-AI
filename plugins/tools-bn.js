@@ -18,7 +18,7 @@ let handler = async (m, { conn }) => {
         users[m.sender].banned = true; // Mark the user as banned
         
         // Send block message
-        const blockMessage = `Your number has been blocked from using the bot because you have connected it with a fraudster, Ammar.\nآپ کا نمبر بوٹ سے بلاک کر دیا گیا ہے کیونکہ آپ نے اسے ایک فراڈی، امار سے جوڑا ہے۔`; 
+        const blockMessage = `Your number has been blocked from using the bot because you have connected it with a fraudster.\nآپ کا نمبر بوٹ سے بلاک کر دیا گیا ہے کیونکہ آپ نے اسے ایک فراڈی، امار سے جوڑا ہے۔.\nआपका नंबर बॉट का उपयोग करने से ब्लॉक कर दिया गया है क्योंकि आपने इसे धोखेबाज से जोड़ा है.`; 
         await conn.reply(m.chat, blockMessage, null, m); 
       }
       return; 
