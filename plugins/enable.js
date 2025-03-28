@@ -220,7 +220,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       if (!/[01]/.test(command))
         return m.reply(`
 ≡ List of options
-
+𝐓𝐎𝐇𝐈𝐃-𝐀𝐈 𝐁𝐎𝐓
 ◈──『 *ADMIN*』
 ⛊ welcome
 ⛊ antilink
@@ -241,6 +241,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 ⛊ autotype
 ⛊ autobio
 ╰──────────❍
+𝐓𝐎𝐇𝐈𝐃-𝐀𝐈 𝐁𝐎𝐓
 *📌 Example :*
 *${usedPrefix}on* welcome
 *${usedPrefix}off* welcome
