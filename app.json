@@ -1,8 +1,12 @@
 {
   "name": "whatsapp-Automation",
   "description": " Whatsapp Ai",
+  "repository": "https://github.com/Tohidkhan6332/TOHID-AI",
+  "logo": "https://i.imgur.com/M1BzE37.jpeg",
+  "success_url": "https://github.com/Tohidkhan6332/TOHID-AI",
   "keywords": [
-    "whatsapp Ai"
+    "whatsapp Ai", "nodejs", "heroku", "bot", "urdu", "english", "indonesian", "arab", "portuguese", "italian", "french", "whatsapp",
+    "termux", "superbot", "multi-device", "md", "official", "javascript", "tohid-ai-bot"
   ],
   "repository": "https://github.com/Tohidkhan6332/TOHID-AI",
   "stack": "container",
