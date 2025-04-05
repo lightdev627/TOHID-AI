@@ -1,62 +1,71 @@
-import { promises } from 'fs'
-import { join } from 'path'
-import axios from 'axios'
+import axios from 'axios';
 
-let handler = async function (m, { conn, __dirname }) {
-  const githubRepoURL = 'https://github.com/Tohidkhan6332/TOHID-AI'
+const handler = async (m, { conn }) => {
+    const githubRepoURL = 'https://github.com/Tohidkhan6332/TOHID-AI';
+    
+    try {
+        const match = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/);
+        if (!match) throw new Error('Invalid repository URL');
+        
+        const [_, username, repoName] = match;
+        const { data: repoData } = await axios.get(`https://api.github.com/repos/${username}/${repoName}`);
+        
+        const formattedInfo = `
+        🍑🍆 *TOHID-AI BOT* 💦☣
+        
+📂 *Repository:* ${repoData.name}
+👤 *Owner:* ${repoData.owner.login}
+⭐ *Stars:* ${repoData.stargazers_count}
+🍴 *Forks:* ${repoData.forks_count}
+🌐 *URL:* ${repoData.html_url}
+📝 *Description:* ${repoData.description || 'No description available'}
+        
+🚀 *OUR REPOSITORY*
+_Welcome To Tohid-Ai! 🤖✨_
 
-  try {
-    const [, username, repoName] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/)
+OUR CHANNEL: https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T
+OFFICIAL GROUP: https://chat.whatsapp.com/IqRWSp7pXx8DIMtSgDICGu
+⚡ *DEPLOY TOHID-AI BOT NOW!*
+\`\`\` USER FRIENDLY TOHID-AI BOT 💥 \`\`\`
+        `.trim();
 
-    const response = await axios.get(`https://api.github.com/repos/${username}/${repoName}`)
+        const userProfilePic = await conn.profilePictureUrl(m.sender, 'image').catch(() => repoData.owner.avatar_url);
 
-    if (response.status === 200) {
-      const repoData = response.data
+        await conn.sendMessage(m.chat, {
+            text: formattedInfo,
+            contextInfo: {
+                externalAdReply: {
+                    title: 'Tohid-Ai Bot Repository',
+                    body: 'Click to visit GitHub',
+                    thumbnailUrl: repoData.owner.avatar_url,
+                    sourceUrl: repoData.html_url,
+                    showAdAttribution: true
+                }
+            }
+        });
 
-      // Format the repository information with emojis
-      const formattedInfo = `
-📂 Repository Name: ${repoData.name}
-📝 Description: ${repoData.description}
-👤 Owner: ${repoData.owner.login}
-⭐ Stars: ${repoData.stargazers_count}
-🍴 Forks: ${repoData.forks_count}
-🌐 URL: ${repoData.html_url}
-      `.trim()
-
-      // Send the formatted information as a message
-      await conn.relayMessage(
-        m.chat,
-        {
-          requestPaymentMessage: {
-            currencyCodeIso4217: 'INR',
-            amount1000: 69000,
-            requestFrom: m.sender,
-            noteMessage: {
-              extendedTextMessage: {
-                text: formattedInfo,
-                contextInfo: {
-                  externalAdReply: {
-                    showAdAttribution: true,
-                  },
-                },
-              },
-            },
-          },
-        },
-        {}
-      )
-    } else {
-      // Handle the case where the API request fails
-      await conn.reply(m.chat, 'Unable to fetch repository information.', m)
+        await conn.sendMessage(m.chat, {
+            image: { url: userProfilePic },  
+            caption: formattedInfo,
+            contextInfo: {
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363207624903731@newsletter',
+                    newsletterName: 'TOHID-AI BOT REPO💖',
+                    serverMessageId: 143
+                }
+            }
+        });
+    } catch (error) {
+        console.error(error);
+        await conn.reply(m.chat, '❌ Error fetching repository information. Please try again later.', m);
     }
-  } catch (error) {
-    console.error(error)
-    await conn.reply(m.chat, 'An error occurred while fetching repository information.', m)
-  }
-}
+};
 
-handler.help = ['script']
-handler.tags = ['main']
-handler.command = ['sc', 'repo', 'script']
+handler.help = ['script'];
+handler.tags = ['main'];
+handler.command = ['sc', 'repo', 'script'];
 
-export default handler
+export default handler;
