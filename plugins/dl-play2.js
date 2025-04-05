@@ -4,7 +4,7 @@ import ytSearch from "yt-search";
 let handler = async (m, { conn, text }) => {
   if (!text) return m.reply("❌ *Oops! What song do you want to download?*");
 
-  let loadingMsg = await m.reply("⏳ *Silva MD Bot is searching for your song... Please wait...*");
+  let loadingMsg = await m.reply("⏳ *Tohid-Ai Bot is searching for your song... Please wait...*");
 
   try {
     let search = await ytSearch(text);
