@@ -94,18 +94,31 @@ let str = `
 > 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
 `
 
-await conn.sendMessage(from,{image:{url: config.global.fglog},caption:madeMenu,
-                             contextInfo: {
-    mentionedJid: [m.sender],
-    forwardingScore: 999,
-    isForwarded: true,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363318387454868@newsletter',
-      newsletterName: '𓆩ྀི͛𝐀ɭīī 𝐌Ɗ 𝚩❍𝐓 𝐌𝛆፝֟፝֟ƞ̽ʊྀི̊𓆪͛',
-      serverMessageId: 999
-    }
-  }
-}, { quoted: mek });
+await conn.sendMessage(m.chat, { 
+        image: { url: pp }, 
+        caption: str,
+        mentions: [m.sender],
+        contextInfo: {
+            mentionedJid: [m.sender],
+            forwardingScore: 999,
+            isForwarded: true,
+            externalAdReply: {
+                title: `${BOTNAME}`,
+                body: "Your Personal WhatsApp Bot",
+                thumbnailUrl: pp,
+                sourceUrl: "https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T" + (conn.user.jid.split`@`[0]),
+                mediaType: 1,
+                renderLargerThumbnail: true
+            },
+            forwardedNewsletterMessageInfo: {
+                newsletterJid: '120363207624903731@newsletter',
+                newsletterName: `${BOTNAME} Bot Updates`,
+                serverMessageId: 999
+            }
+        }
+    }, { quoted: m })
+    m.react('✅')
+}
 
        // await conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12, pp13, pp14, pp15].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
     
