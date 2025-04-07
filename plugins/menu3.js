@@ -9,20 +9,7 @@ let handler = async function (m, { conn, text, usedPrefix }) {
 ▢ Don't be Sad
 └──────────────`;
   
-              await conn.sendMessage(m.chat, {
-            image: { url: userProfilePic },  
-            caption: formattedInfo,
-            contextInfo: {
-                mentionedJid: [m.sender],
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363207624903731@newsletter',
-                    newsletterName: 'TOHID-AI BOT MENU💖',
-                    serverMessageId: 143
-                }
-            }
-        });
+  let pp = './assets/tohid.jpg';
 
   // Send a button message
   await conn.sendButton(m.chat, m2, 'TOHID-AI', pp, [
