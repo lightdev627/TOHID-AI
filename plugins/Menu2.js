@@ -94,7 +94,17 @@ let str = `
 > 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
 `
 
-    
+     contextInfo: {
+        mentionedJid: [m.sender],
+        forwardingScore: 999,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: '120363207624903731@newsletter',
+          newsletterName: '『 𝐓𝐎𝐇𝐈𝐃 𝐓𝐄𝐂𝐇 🤖 』',
+          serverMessageId: 143
+        }
+      }
+    }, { quoted: mek });
 
        // await conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12, pp13, pp14, pp15].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
     
