@@ -94,7 +94,7 @@ let str = `
 > 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
 `
 
-await conn.sendMessage(from,{image:{url:  './assets/A.jpg'},caption:madeMenu,
+await conn.sendMessage(from,{image:{url: config.global.fglog},caption:madeMenu,
                              contextInfo: {
     mentionedJid: [m.sender],
     forwardingScore: 999,
