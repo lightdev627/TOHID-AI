@@ -106,12 +106,12 @@ await conn.sendMessage(m.chat, {
                 title: `${BOTNAME}`,
                 body: "Your Personal WhatsApp Bot",
                 thumbnailUrl: pp,
-                sourceUrl: "https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T" + (conn.user.jid.split`@`[0]),
+                sourceUrl: "https://wa.me/" + (conn.user.jid.split`@`[0]),
                 mediaType: 1,
                 renderLargerThumbnail: true
             },
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363207624903731@newsletter',
+                newsletterJid: '120363318387454868@newsletter',
                 newsletterName: `${BOTNAME} Bot Updates`,
                 serverMessageId: 999
             }
