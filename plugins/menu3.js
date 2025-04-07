@@ -9,10 +9,8 @@ let handler = async function (m, { conn, text, usedPrefix }) {
 ▢ Don't be Sad
 └──────────────`;
   
-  let pp = './assets/tohid.jpg';
-  
-  await conn.sendMessage(m.chat, {
-            image: { url: pp },  
+              await conn.sendMessage(m.chat, {
+            image: { url: userProfilePic },  
             caption: formattedInfo,
             contextInfo: {
                 mentionedJid: [m.sender],
