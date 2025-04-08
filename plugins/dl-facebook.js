@@ -37,6 +37,18 @@ let handler = async (m, { conn, usedPrefix, args, command, text }) => {
     const cap = 'Here is the video you requested:';
     await conn.sendFile(m.chat, videoURL, 'video.mp4', cap, m);
 
+      contextInfo: {
+        mentionedJid: [m.sender],
+        forwardingScore: 999,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: '120363207624903731@newsletter',
+          newsletterName: '『 𝐓𝐎𝐇𝐈𝐃-𝐀𝐈 𝐅𝐁 𝐃𝐋 』',
+          serverMessageId: 143
+        }
+      }
+    }, { quoted: mek });
+
   } catch (error) {
     console.error("Error:", error);
     throw `An error occurred while processing the request: ${error.message}`;
