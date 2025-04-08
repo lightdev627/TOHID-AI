@@ -34,20 +34,8 @@ let handler = async (m, { conn, usedPrefix, args, command, text }) => {
     // If a video URL is found, send the video
     m.react('✅'); // Indicating that the video is ready to be sent
 
-    const cap = 'Here is the video you requested:';
+    const cap = '*𝐓𝐎𝐇𝐈𝐃-𝐀𝐈 𝐅𝐁  𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐃*';
     await conn.sendFile(m.chat, videoURL, 'video.mp4', cap, m);
-
-      contextInfo: {
-        mentionedJid: [m.sender],
-        forwardingScore: 999,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363207624903731@newsletter',
-          newsletterName: '『 𝐓𝐎𝐇𝐈𝐃-𝐀𝐈 𝐅𝐁 𝐃𝐋 』',
-          serverMessageId: 143
-        }
-      }
-    }, { quoted: mek });
 
   } catch (error) {
     console.error("Error:", error);
