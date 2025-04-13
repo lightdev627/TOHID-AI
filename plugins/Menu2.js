@@ -104,6 +104,23 @@ let str = `
     m.react(done)
 
 }
+
+  // Send multimedia menu with thumbnail
+  await conn.sendMessage(m.chat, { 
+    image: { url: menuThumbnail },  
+    caption: status,
+    contextInfo: {
+      mentionedJid: [m.sender],
+      forwardingScore: 999,
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: '120363207624903731@newsletter',
+        newsletterName: 'TOHID-AI BOT 💖',
+        serverMessageId: 143
+      }
+    }
+  }, { quoted: m });
+
 handler.help = ['main']
 handler.tags = ['group']
 handler.command = ['menu', 'help'] 
