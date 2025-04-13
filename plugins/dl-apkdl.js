@@ -1,1 +1,110 @@
-const _0x84c9be=_0x49dd;(function(_0x384a30,_0x387e01){const _0x394e94=_0x49dd,_0x56c5ad=_0x384a30();while(!![]){try{const _0x3150c8=-parseInt(_0x394e94(0x17e))/(-0x1100+0x9f+0x1062)+parseInt(_0x394e94(0x1c7))/(0xd*-0x4b+0x2*0x12be+-0x21ab)+-parseInt(_0x394e94(0x188))/(0x1818+-0x1ea3+0x2*0x347)+parseInt(_0x394e94(0x1c3))/(-0x7a*-0x26+0x1ac7+0x1*-0x2cdf)*(-parseInt(_0x394e94(0x1ab))/(0xfc9+0x6b4+-0x4*0x59e))+-parseInt(_0x394e94(0x16b))/(0x17*0x72+0x1ed4+-0x290c)+-parseInt(_0x394e94(0x1a5))/(0x1*0x448+0x1958+0x1*-0x1d99)*(-parseInt(_0x394e94(0x1a2))/(0xa72+-0x25f4+-0x32*-0x8d))+parseInt(_0x394e94(0x17f))/(0x251e+0x24c4+-0x3e3*0x13);if(_0x3150c8===_0x387e01)break;else _0x56c5ad['push'](_0x56c5ad['shift']());}catch(_0x5e97f9){_0x56c5ad['push'](_0x56c5ad['shift']());}}}(_0x5540,0x8a*0x916+0x5f27e+-0x67b33*0x1));import _0x2a4de8 from'node-fetch';function _0x49dd(_0x1252da,_0x28e397){const _0x2b682f=_0x5540();return _0x49dd=function(_0x4d731c,_0x2f5bb6){_0x4d731c=_0x4d731c-(0x5f*-0x26+-0x1ff9+0x2f7d);let _0x332cfb=_0x2b682f[_0x4d731c];return _0x332cfb;},_0x49dd(_0x1252da,_0x28e397);}const fetchWithRetry=async(_0x4bac42,_0x5e7e50=-0xc91*0x3+0x1*-0x1ad1+0x4087,_0x407543=0x7*-0x3a+0x1594+-0x1016)=>{const _0x550392=_0x49dd,_0xe49c50={'kQRvV':function(_0x4f6c27,_0x5619da){return _0x4f6c27<_0x5619da;},'LLCsw':function(_0x56896d,_0x5e9842){return _0x56896d(_0x5e9842);},'wbksh':_0x550392(0x19f)+_0x550392(0x1b6)+_0x550392(0x1c8)+_0x550392(0x1c6)};for(let _0x485acc=0xaa6*0x3+0xfb*0xd+0x1*-0x2cb1;_0xe49c50[_0x550392(0x18f)](_0x485acc,_0x5e7e50);_0x485acc++){try{const _0x5f31b4=await _0xe49c50[_0x550392(0x189)](_0x2a4de8,_0x4bac42);if(_0x5f31b4['ok'])return _0x5f31b4;else{const _0x5d80ac=await _0x5f31b4[_0x550392(0x193)]();}}catch(_0x3a2413){}await new Promise(_0x25345d=>setTimeout(_0x25345d,_0x407543));}throw new Error(_0xe49c50[_0x550392(0x199)]);},handler=async(_0x1730a3,{args:_0xc2b5c4,conn:_0x2f0d04})=>{const _0x23ebb0=_0x49dd,_0x57f2d9={'wWeEX':_0x23ebb0(0x1a4)+_0x23ebb0(0x1bc)+_0x23ebb0(0x1c5)+_0x23ebb0(0x19a),'ylgjM':function(_0x557484,_0x2a6689){return _0x557484(_0x2a6689);},'IKogK':_0x23ebb0(0x19f)+_0x23ebb0(0x1bb)+_0x23ebb0(0x196)+_0x23ebb0(0x1ba)+_0x23ebb0(0x174),'Rglzq':_0x23ebb0(0x173)+'p','xnqqW':_0x23ebb0(0x1bf)+_0x23ebb0(0x1a9),'rLlvO':_0x23ebb0(0x1a6)+_0x23ebb0(0x187)+_0x23ebb0(0x175)+_0x23ebb0(0x18e),'OFJfV':function(_0x4ffd00,_0x5287c8){return _0x4ffd00+_0x5287c8;},'wvCii':function(_0x280484,_0x5eedd5){return _0x280484(_0x5eedd5);},'YhMjs':function(_0x5238fe,_0x4b61a4){return _0x5238fe===_0x4b61a4;},'XUAeT':_0x23ebb0(0x1a3)+_0x23ebb0(0x1b7),'Agqzd':_0x23ebb0(0x1cf)+_0x23ebb0(0x195),'XMheE':_0x23ebb0(0x1a0)+_0x23ebb0(0x192)+_0x23ebb0(0x180),'iNZbh':_0x23ebb0(0x16a)+_0x23ebb0(0x16e)+_0x23ebb0(0x1ac)+_0x23ebb0(0x177)+_0x23ebb0(0x170)+_0x23ebb0(0x191)+_0x23ebb0(0x172)+_0x23ebb0(0x1a1)};if(!_0xc2b5c4[_0x23ebb0(0x1be)]){await _0x1730a3[_0x23ebb0(0x1c1)](_0x57f2d9[_0x23ebb0(0x179)]);return;}const _0x4fcb6d=_0xc2b5c4[_0x23ebb0(0x181)]('\x20');await _0x1730a3[_0x23ebb0(0x19c)]('⏳');try{const _0x4055df=_0x23ebb0(0x185)+_0x23ebb0(0x1ad)+_0x23ebb0(0x1aa)+_0x23ebb0(0x1bd)+_0x23ebb0(0x16d)+_0x23ebb0(0x1af)+_0x23ebb0(0x1b0)+_0x23ebb0(0x18d)+_0x57f2d9[_0x23ebb0(0x178)](encodeURIComponent,_0x4fcb6d),_0x1c6cb5=await _0x57f2d9[_0x23ebb0(0x178)](fetchWithRetry,_0x4055df),_0x586df5=await _0x1c6cb5[_0x23ebb0(0x17c)]();if(!_0x586df5[_0x23ebb0(0x183)])throw new Error(_0x57f2d9[_0x23ebb0(0x1a7)]);const _0x476c84=_0x586df5[_0x23ebb0(0x1ae)],_0x1a2496=_0x476c84[_0x23ebb0(0x198)]||_0x57f2d9[_0x23ebb0(0x184)],_0xa2d010=_0x476c84[_0x23ebb0(0x1b5)]||'',_0x24e4f9=_0x476c84[_0x23ebb0(0x1b4)]||_0x57f2d9[_0x23ebb0(0x1b9)],_0x5c48fe=_0x476c84[_0x23ebb0(0x1cb)+'rl']||'',_0x384940=_0x476c84[_0x23ebb0(0x1b2)]||_0x57f2d9[_0x23ebb0(0x186)],_0x5a9252=_0x57f2d9[_0x23ebb0(0x1b3)](_0x57f2d9[_0x23ebb0(0x1b3)](_0x57f2d9[_0x23ebb0(0x1b3)](_0x23ebb0(0x182)+_0x23ebb0(0x1c2),_0x23ebb0(0x1b8)+'*\x20'+_0x1a2496+'\x0a'),_0x23ebb0(0x190)+_0x23ebb0(0x1c4)+_0x24e4f9+'\x0a'),_0x23ebb0(0x18a)+_0x23ebb0(0x17a)+_0x23ebb0(0x16c)),_0x171465=await _0x57f2d9[_0x23ebb0(0x197)](fetchWithRetry,_0x5c48fe),_0x43fbb7=Buffer[_0x23ebb0(0x19b)](await _0x171465[_0x23ebb0(0x16f)+'r']());if(_0x57f2d9[_0x23ebb0(0x1b1)](_0x43fbb7[_0x23ebb0(0x1be)],0x502*0x2+0x1631*-0x1+0x3*0x40f))throw new Error(_0x57f2d9[_0x23ebb0(0x17b)]);_0xa2d010?await _0x2f0d04[_0x23ebb0(0x18c)+'e'](_0x1730a3[_0x23ebb0(0x171)],{'image':{'url':_0xa2d010},'caption':_0x5a9252,'quoted':_0x1730a3}):await _0x2f0d04[_0x23ebb0(0x18c)+'e'](_0x1730a3[_0x23ebb0(0x171)],{'text':_0x5a9252,'quoted':_0x1730a3}),await _0x2f0d04[_0x23ebb0(0x1c9)](_0x1730a3[_0x23ebb0(0x171)],_0x43fbb7,_0x1a2496+_0x23ebb0(0x1cc),_0x57f2d9[_0x23ebb0(0x176)],_0x1730a3,![],{'mimetype':_0x384940}),await _0x1730a3[_0x23ebb0(0x19c)]('✅');}catch(_0x12788e){console[_0x23ebb0(0x1ca)](_0x57f2d9[_0x23ebb0(0x17d)],_0x12788e[_0x23ebb0(0x194)],_0x12788e[_0x23ebb0(0x1ce)]),await _0x1730a3[_0x23ebb0(0x1c1)](_0x57f2d9[_0x23ebb0(0x18b)]),await _0x1730a3[_0x23ebb0(0x19c)]('❌');}};handler[_0x84c9be(0x19d)]=[_0x84c9be(0x1c0),_0x84c9be(0x19e)],handler[_0x84c9be(0x1a8)]=['dl'],handler[_0x84c9be(0x1cd)]=[_0x84c9be(0x1c0),_0x84c9be(0x19e)];function _0x5540(){const _0x5d7b7c=['457852QPjizX','12030759gLslCt','etails:','join','*APP\x20Detai','success','Rglzq','https://ap','rLlvO','n/vnd.andr','968556YFhokp','LLCsw','*𝙿𝙾𝚆𝙴𝚁𝙴𝙳\x20𝙱','iNZbh','sendMessag','ame=','e-archive','kQRvV','*Developer','Please\x20try','hing\x20APK\x20d','text','message','OUR\x20APK*','PK\x20details','wvCii','appname','wbksh','download.','from','react','help','appdl','Failed\x20to\x20','Error\x20fetc','er.','68104SXGKxk','APK\x20file\x20i','Please\x20pro','175RqbOZS','applicatio','IKogK','tags','veloper','ch.web.id/','736645xIkJFf','ile\x20fetchi','i.giftedte','result','pikey=gift','ed-md&appN','YhMjs','mimetype','OFJfV','developer','appicon','fetch\x20data','s\x20empty','*App\x20Name:','xnqqW','\x20from\x20the\x20','retrieve\x20A','vide\x20an\x20ap','api/downlo','length','Unknown\x20De','apk','reply','ls*\x0a\x0a','12DEedVH',':*\x20','p\x20name\x20to\x20','ries','250422LTYJeg','\x20after\x20ret','sendFile','error','download_u','.apk','command','stack','*HERE\x20IS\x20Y','An\x20error\x20o','996630AvOcEn','𝙸*','ad/apkdl?a','ccurred\x20wh','arrayBuffe','\x20details.\x20','chat','\x20again\x20lat','Unknown\x20Ap','API.','oid.packag','Agqzd','ng\x20the\x20APK','ylgjM','wWeEX','𝚈\x20©\x20𝚃𝙾𝙷𝙸𝙳-𝙰','XUAeT','json','XMheE'];_0x5540=function(){return _0x5d7b7c;};return _0x5540();}export default handler;
+const { fetchJson } = require("../lib/functions");
+const { downloadTiktok } = require("@mrnima/tiktok-downloader");
+const { facebook } = require("@mrnima/facebook-downloader");
+const cheerio = require("cheerio");
+const { igdl } = require("ruhend-scraper");
+const axios = require("axios");
+const { cmd, commands } = require('../command');
+
+// apk-dl
+
+cmd({
+  pattern: "apk",
+  desc: "Download APK from Aptoide.",
+  category: "download",
+  filename: __filename
+}, async (conn, m, store, {
+  from,
+  quoted,
+  q,
+  reply
+}) => {
+  try {
+    if (!q) {
+      return reply("*🏷️ ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀɴ ᴀᴘᴘ ɴᴀᴍᴇ ᴛᴏ sᴇᴀʀᴄʜ.*");
+    }
+
+    await conn.sendMessage(from, { react: { text: "⏳", key: m.key } });
+
+    const apiUrl = `http://ws75.aptoide.com/api/7/apps/search/query=${q}/limit=1`;
+    const response = await axios.get(apiUrl);
+    const data = response.data;
+
+    if (!data || !data.datalist || !data.datalist.list.length) {
+      return reply("⚠️ No results found for the given app name.");
+    }
+
+    const app = data.datalist.list[0];
+    const appSize = (app.size / 1048576).toFixed(2); // Convert bytes to MB
+
+    const caption = `╭═══ 〔 *𝐓𝐎𝐇𝐈𝐃_𝐌𝐃 𝐀𝐏𝐊* 〕═══❐
+┃ 🏷️ *ɴᴀᴍᴇ:* ${app.name}
+┃ 📦 *sɪᴢᴇ:* ${appSize} MB
+┃ 📮 *ᴘᴀᴄᴋᴀɢᴇ:* ${app.package}
+┃ 📅 *ᴜᴘᴅᴀᴛᴇᴅ ᴏɴ:* ${app.updated}
+┃ 👨🏻‍💻 *ᴅᴇᴠᴇʟᴏᴘᴇʀ:* ${app.developer.name}
+╰══════════════════❐
+> *© 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚃𝙾𝙷𝙸𝙳_𝙼𝙳🎐*`;
+
+    await conn.sendMessage(from, { react: { text: "⬆️", key: m.key } });
+
+    await conn.sendMessage(from, {
+      document: { url: app.file.path_alt },
+      fileName: `${app.name}.apk`,
+      mimetype: "application/vnd.android.package-archive",
+      caption: caption
+    }, { quoted: m });
+
+    await conn.sendMessage(from, { react: { text: "✅", key: m.key } });
+
+  } catch (error) {
+    console.error("Error:", error);
+    reply("❌ An error occurred while fetching the APK. Please try again.");
+  }
+});
+
+// G-Drive-DL
+
+cmd({
+  pattern: "gdrive",
+  desc: "Download Google Drive files.",
+  react: "🌐",
+  category: "download",
+  filename: __filename
+}, async (conn, m, store, {
+  from,
+  quoted,
+  q,
+  reply
+}) => {
+  try {
+    if (!q) {
+      return reply("*🏷️ ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴠᴀʟɪᴅ ɢᴏᴏɢʟᴇ ᴅʀɪᴠᴇ ʟɪɴᴋ.*");
+    }
+
+    await conn.sendMessage(from, { react: { text: "⬇️", key: m.key } });
+
+    const apiUrl = `https://api.fgmods.xyz/api/downloader/gdrive?url=${q}&apikey=mnp3grlZ`;
+    const response = await axios.get(apiUrl);
+    const downloadUrl = response.data.result.downloadUrl;
+
+    if (downloadUrl) {
+      await conn.sendMessage(from, { react: { text: "⬆️", key: m.key } });
+
+      await conn.sendMessage(from, {
+        document: { url: downloadUrl },
+        mimetype: response.data.result.mimetype,
+        fileName: response.data.result.fileName,
+        caption: "> *© 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚃𝙾𝙷𝙸𝙳_𝙼𝙳🎐*"
+      }, { quoted: m });
+
+      await conn.sendMessage(from, { react: { text: "✅", key: m.key } });
+    } else {
+      return reply("⚠️ No download URL found. Please check the link and try again.");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    reply("❌ An error occurred while fetching the Google Drive file. Please try again.");
+  }
+}); 
+      
