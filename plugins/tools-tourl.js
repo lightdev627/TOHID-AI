@@ -32,10 +32,10 @@ let handler = async m => {
 
     const fileSizeMB = (mediaBuffer.length / (1024 * 1024)).toFixed(2)
 
-    m.reply(`✅ *Media Upload Successful*\n☆ *File Size:* ${fileSizeMB} MB\n☆ *URL:* ${link}`)
+    m.reply(`✅ *TOHID-AI Media Upload Successful*\n♕ *File Size:* ${fileSizeMB} MB\n♕ *URL:* ${link}`)
   } else {
-    m.reply(`☆ ${mediaBuffer.length} Byte(s) 
-    ☆ (Unknown)`)
+    m.reply(`♕ ${mediaBuffer.length} Byte(s) 
+    ♕ (Unknown)`)
   }
 
   fs.unlinkSync(mediaPath)
