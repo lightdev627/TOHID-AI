@@ -96,15 +96,18 @@ global.fgpyp = 'https://GitHub.com/Tohidkhan6332'
 global.fglog = 'https://i.imgur.com/WnKjrJt.jpeg'
 global.thumb = fs.readFileSync('./assets/tohid.jpg')
 
-global.wait = '⏳'
+//Reactions
+global.wait = '*`⏰ 𝙷𝚘𝚕𝚍 𝙾𝚗 𝙿𝚛𝚘𝚌𝚎𝚜𝚜𝚒𝚗𝚐...`*'
+global.imgs = '*🖼️ _𝙶𝙴𝚃𝚃𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 ɪᴍᴀɢᴇs 𝚆𝙰𝙸𝚃..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⏳'
 global.dmoji = '🤭'
 global.done = '✅'
-global.error = '❌'
-global.xmoji = '🤩'
-
-global.multiplier = 69
-global.maxwarn = '3'
+global.error = '❌' 
+global.xmoji = '🌀' 
+global.multiplier = 69 
+global.maxwarn = '2' 
+global.eror = '```404 error```'
+//💌------------------------------------------💌
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
