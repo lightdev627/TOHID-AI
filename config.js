@@ -71,6 +71,18 @@ global.APIKeys = {
   'https://api.fgmods.xyz': 'm2XBbNvz',
 }
 
+
+// Bot Images 
+global.imagen1 = fs.readFileSync("./assets/tohid.jpg")
+global.imagen2 = fs.readFileSync("./assets/A.jpg")
+//💌------------------------------------------💌
+
+// Randome
+global.tohidImg = [imagen1, imagen2]
+
+
+
+
 // Sticker WM
 global.premium = 'true'
 global.packname = 'TOHID-AI'
