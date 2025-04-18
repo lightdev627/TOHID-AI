@@ -100,6 +100,14 @@ To set up the TOHID-AI quickly, follow our detailed tutorial on YouTube:
       <img alt='Deploy on Heroku' src='https://img.shields.io/badge/-DEPLOY-purple?style=for-the-badge&logo=heroku&logoColor=white'/>
    </a>
 
+      **Option B: Deploy on Talkdrove**
+1. [Sign Up on Talkdrove](https://talkdrove.com/auth/signup).
+2. Deploy your app using the button below:
+   <br>
+   <a href='https://host.talkdrove.com/dashboard/select-bot/prepare-deployment?botId=27' target="_blank">
+      <img alt='Deploy on Koyeb' src='https://img.shields.io/badge/-DEPLOY-blue?style=for-the-badge&logo=whatsapp&logoColor=white'/>
+   </a>
+
 **Option B: Deploy on Koyeb**
 1. [Sign Up on Koyeb](https://app.koyeb.com/auth/signup).
 3. Deploy your app using the button below:
