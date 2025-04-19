@@ -1,11 +1,12 @@
-import { smsg } from './lib/simple.js';
-import { format } from 'util';
-import { fileURLToPath } from 'url';
-import path, { join } from 'path';
-import { unwatchFile, watchFile } from 'fs';
-import chalk from 'chalk';
-import fetch from 'node-fetch';
-import Pino from 'pino';
+import { smsg } from './lib/simple.js'
+import { format } from 'util'
+import { fileURLToPath } from 'url'
+import path, { join } from 'path'
+import { unwatchFile, watchFile } from 'fs'
+import chalk from 'chalk'
+import fetch from 'node-fetch'
+import Pino from 'pino'
+
 /**
  * @type {import("@whiskeysockets/baileys")}
  */
@@ -65,7 +66,7 @@ export async function handler(chatUpdate) {
         }
         //--user number
         if (!isNumber(user.afk)) user.afk = -1
-        if (!('afkReason' in user)) user.afkReason = ''
+        if (!('afkReason' in user)) user.afkReason = 'away from keyboard'
         if (!('banned' in user)) user.banned = false
         if (!isNumber(user.warn)) user.warn = 0
         if (!isNumber(user.level)) user.level = 0
@@ -74,6 +75,7 @@ export async function handler(chatUpdate) {
            /*
    Do Not Modify this Section ❌  👇👇
    Else Relationship Features Will Not Work 😔
+   Your Devs Friend Tohid
    */
    if (!('lover' in user)) user.lover = ''
    if (!('exlover' in user)) user.exlover = ''
@@ -88,6 +90,7 @@ export async function handler(chatUpdate) {
    /*
    Do Not Modify this Section ❌  ☝️☝️
    Else Relationship Features Will Not Work 😔
+   Your Devs Friend Tohid
    */
           exp: 0,
           credit: 0,
@@ -110,43 +113,43 @@ export async function handler(chatUpdate) {
       let chat = global.db.data.chats[m.chat]
       if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
       if (chat) {
-        if (!('antiDelete' in chat)) chat.antiDelete = false
+        if (!('antiDelete' in chat)) chat.antiDelete = true
         if (!('antiLink' in chat)) chat.antiLink = false
-        if (!('antiSticker' in chat)) chat.antiSticker = false
+        if (!('antiSticker' in chat)) chat.antiSticker = true
         if (!('antiToxic' in chat)) chat.antiToxic = false
         if (!('detect' in chat)) chat.detect = false
-        if (!('getmsg' in chat)) chat.getmsg = false
+        if (!('getmsg' in chat)) chat.getmsg = true
         if (!('isBanned' in chat)) chat.isBanned = false
-        if (!('nsfw' in chat)) chat.nsfw = false
+        if (!('nsfw' in chat)) chat.nsfw = true
         if (!('sBye' in chat)) chat.sBye = ''
         if (!('sDemote' in chat)) chat.sDemote = ''
         if (!('simi' in chat)) chat.simi = false
         if (!('sPromote' in chat)) chat.sPromote = ''
         if (!('sWelcome' in chat)) chat.sWelcome = ''
-        if (!('useDocument' in chat)) chat.useDocument = false
+        if (!('useDocument' in chat)) chat.useDocument = true
         if (!('viewOnce' in chat)) chat.viewOnce = true
         if (!('viewStory' in chat)) chat.viewStory = true
         if (!('welcome' in chat)) chat.welcome = false
-        if (!('chatbot' in chat)) chat.chatbot = false
+        if (!('chatbot' in chat)) chat.chatbot = true
         if (!isNumber(chat.expired)) chat.expired = 0
       } else
         global.db.data.chats[m.chat] = {
-          antiDelete: false,
+          antiDelete: true,
           antiLink: false,
-          antiSticker: false,
+          antiSticker: true,
           antiToxic: false,
           detect: false,
           expired: 0,
-          getmsg: false,
+          getmsg: true,
           isBanned: false,
-          nsfw: false,
+          nsfw: true,
           sBye: '',
           sDemote: '',
           simi: false,
           sPromote: '',
           sticker: false,
           sWelcome: '',
-          useDocument: false,
+          useDocument: true,
           viewOnce: true,
           viewStory: true,
           welcome: false,
@@ -526,8 +529,8 @@ export async function participantsUpdate({ id, participants, action }) {
     welcome: '👋',
     bye: '👋',
     bug: '🐛',
-    mail: '📧',
-    owner: '😎',
+    mail: '📮',
+    owner: '👑',
   }
 
   switch (action) {
@@ -541,8 +544,8 @@ export async function participantsUpdate({ id, participants, action }) {
             ppgp = await this.profilePictureUrl(id, 'image')
           } catch (error) {
             console.error(`Error retrieving profile picture: ${error}`)
-            pp = 'https://i.ibb.co/9HY4wjz/a4c0b1af253197d4837ff6760d5b81c0.jpg' // Assign default image URL
-            ppgp = 'https://i.ibb.co/9HY4wjz/a4c0b1af253197d4837ff6760d5b81c0.jpg' // Assign default image URL
+            pp = 'https://i.imgur.com/8B4jwGq.jpeg' // Assign default image URL
+            ppgp = 'https://i.imgur.com/8B4jwGq.jpeg' // Assign default image URL
           } finally {
             let text = (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user')
               .replace('@group', await this.getName(id))
@@ -563,8 +566,7 @@ export async function participantsUpdate({ id, participants, action }) {
             )}`
 
             try {
-              const welcomeUrl = 'https://i.imgur.com/mxFDDcm.jpeg';
-              let welcomeResponse = await fetch(welcomeUrl)
+              let welcomeResponse = await fetch(welcomeApiUrl)
               let welcomeBuffer = await welcomeResponse.buffer()
 
               this.sendMessage(id, {
@@ -572,9 +574,9 @@ export async function participantsUpdate({ id, participants, action }) {
                 contextInfo: {
                   mentionedJid: [user],
                   externalAdReply: {
-                    title: '𝕋𝕆𝕌ℂℍ ℍ𝔼ℝ𝔼',
+                    title: '𝚃𝙾𝙷𝙸𝙳-𝙰𝙸',
                     body: '𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙿',
-                    thumbnailUrl: welcomeUrl,
+                    thumbnailUrl: welcomeApiUrl,
                     sourceUrl: 'https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T',
                     mediaType: 1,
                     renderLargerThumbnail: true,
@@ -599,8 +601,8 @@ export async function participantsUpdate({ id, participants, action }) {
             ppgp = await this.profilePictureUrl(id, 'image')
           } catch (error) {
             console.error(`Error retrieving profile picture: ${error}`)
-            pp = 'https://i.ibb.co/9HY4wjz/a4c0b1af253197d4837ff6760d5b81c0.jpg' // Assign default image URL
-            ppgp = 'https://i.ibb.co/9HY4wjz/a4c0b1af253197d4837ff6760d5b81c0.jpg' // Assign default image URL
+            pp = 'https://i.imgur.com/8B4jwGq.jpeg' // Assign default image URL
+            ppgp = 'https://i.imgur.com/8B4jwGq.jpeg' // Assign default image URL
           } finally {
             let text = (chat.sBye || this.bye || conn.bye || 'HELLO, @user').replace(
               '@user',
@@ -621,8 +623,7 @@ export async function participantsUpdate({ id, participants, action }) {
             )}`
 
             try {
-              const leaveUrl = 'https://i.imgur.com/rO8hlAQ.jpeg';
-              let leaveResponse = await fetch(leaveUrl)
+              let leaveResponse = await fetch(leaveApiUrl)
               let leaveBuffer = await leaveResponse.buffer()
 
               this.sendMessage(id, {
@@ -630,9 +631,9 @@ export async function participantsUpdate({ id, participants, action }) {
                 contextInfo: {
                   mentionedJid: [user],
                   externalAdReply: {
-                    title: '𝕋𝕆𝕌ℂℍ ℍ𝔼ℝ𝔼',
-                    body: '𝙶𝙾𝙾𝙳 𝙱𝚈𝙴 𝙵𝚁𝙾𝙼 𝙶𝚁𝙾𝚄𝙿',
-                    thumbnailUrl: leaveUrl,
+                    title: '𝚃𝙾𝙷𝙸𝙳-𝙰𝙸',
+                    body: '𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝙶𝚁𝙾𝚄𝙿',
+                    thumbnailUrl: leaveApiUrl,
                     sourceUrl: 'https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T',
                     mediaType: 1,
                     renderLargerThumbnail: true,
@@ -785,7 +786,7 @@ export async function deleteUpdate(message) {
             ≡ deleted a message 
             ┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
             ▢ *Number :* @${participant.split`@`[0]} 
-            └─────────────
+            └──────𝚃𝙾𝙷𝙸𝙳-𝙰𝙸───────
             `.trim(),
       msg,
       {
@@ -858,11 +859,11 @@ export async function presenceUpdate(presenceUpdate) {
 dfail
  */
 global.dfail = (type, m, conn) => {
-  const userTag = `👋 Hi *@${m.sender.split('@')[0]}*, `
+  const userTag = `👋 Hai *@${m.sender.split('@')[0]}*, `
   const emoji = {
     general: '⚙️',
     owner: '👑',
-    moderator: '🛡️',
+    moderator: '🤖',
     premium: '💎',
     group: '👥',
     private: '📱',
