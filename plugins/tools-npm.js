@@ -31,6 +31,6 @@ let handler = async (m, { args, usedPrefix, command }) => {
 
 handler.help = ['npm <package-name>'];
 handler.tags = ['tools'];
-handler.command = ['npm', 'npmpackage'];
+handler.command = ['npm2', 'npmpackage'];
 
 export default handler;

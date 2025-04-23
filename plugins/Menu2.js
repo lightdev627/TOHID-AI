@@ -77,8 +77,10 @@ let str = `
 ◈├• *logomenu*
 ◈├• *makermenu*
 ◈├• *menu*
+◈├• *menu2*
 ◈├• *menu3*
 ◈├• *menu4*
+◈├• *menu5*
 ◈├• *nsfwmenu*
 ◈├• *randompic*
 ◈├• *randomvid*
@@ -89,6 +91,7 @@ let str = `
 ◈├• *ownermenu*
 ◈├• *setprivacy*
 ◈├• *quranmenu*
+◈├• *studymenu*
 ◈╰─♪♪─★─☆──♪♪─❍
 © *TOHID-AI*
 
