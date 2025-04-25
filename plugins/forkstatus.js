@@ -1,8 +1,8 @@
 import fetch from 'node-fetch';
 
 const handler = async (m, { conn }) => {
-  const user = 'SilvaTechB';
-  const repo = 'silva-md-bot';
+  const user = 'Tohidkhan6332';
+  const repo = 'TOHID-AI';
   const apiUrl = `https://api.github.com/repos/${user}/${repo}`;
 
   try {
