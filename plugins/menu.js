@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let str = `
 ╭═══〘 𝐓𝐎𝐇𝐈𝐃-𝐀𝐈 𝐁𝐎𝐓 〙═══⊷❍
 ┃◈├•━━━❮❮ CMD LINE ❯❯━━━━
-┃◈├•𝙽𝚊𝚖𝚎: ${global.author}
+┃◈├•𝙽𝚊𝚖𝚎: 𝐓𝐎𝐇𝐈𝐃-𝐀𝐈
 ┃◈├•𝚃𝚘𝚝𝚊𝚕: 1000+ Features
 ┃◈├•Network:LTE
 ┃◈├•ᴠᴇʀꜱɪᴏɴ: BETA
@@ -32,9 +32,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┃◈├•HOSTER: *Tohid Platform*
 ┃◈├•ᴍᴏᴅᴇ: *Unkown*
 ┃◈├•ᴘʀᴇғɪx: *Multi-Prefix*
-┃◈├•Uptime: ${uptime}
-┃◈├•Today's Date: ${date}
-┃◈├•Current Time: ${wib}
 ┃◈├•──────────●●►
 ┃◈├ ╔═╦═╗───╔══╗╔╗╔╗╔╗
 ┃◈├ ║║║║╠╦╦═╩╗╔╩╣╚╬╬╝║
@@ -74,49 +71,49 @@ let handler = async (m, { conn, usedPrefix }) => {
                                         "highlight_label": "TOHID-AI",
                                         "rows": [
                                             // MAIN MENUS
-                                            { "header": "MAIN MENUS", "title": "🤖 Bot Menu", "description": "The Bot's control panel", "id": `${usedPrefix}botmenu` },
-                                            { "header": "MAIN MENUS", "title": "👑 Owner Menu", "description": "For the bot owner", "id": `${usedPrefix}ownermenu` },
-                                            { "header": "MAIN MENUS", "title": "👥 Group Menu", "description": "Group management tools", "id": `${usedPrefix}groupmenu` },
+                                            { "header": "BOT MENUS", "title": "🤖 Bot Menu", "description": "The Bot's control panel", "id": `${usedPrefix}botmenu` },
+                                            { "header": "OWNER MENUS", "title": "👑 Owner Menu", "description": "For the bot owner", "id": `${usedPrefix}ownermenu` },
+                                            { "header": "GROUP MENUS", "title": "👥 Group Menu", "description": "Group management tools", "id": `${usedPrefix}groupmenu` },
                                             
                                             // AI & MEDIA
-                                            { "header": "AI & MEDIA", "title": "🧠 AI Menu", "description": "AI-powered features", "id": `${usedPrefix}aimenu` },
-                                            { "header": "AI & MEDIA", "title": "🎧 Audio Editor", "description": "Audio editing tools", "id": `${usedPrefix}aeditor` },
-                                            { "header": "AI & MEDIA", "title": "📥 Download Menu", "description": "Media download tools", "id": `${usedPrefix}dlmenu` },
+                                            { "header": "AI MENUS", "title": "🧠 AI Menu", "description": "AI-powered features", "id": `${usedPrefix}aimenu` },
+                                            { "header": "AUDIO EDITORS", "title": "🎧 Audio Editor", "description": "Audio editing tools", "id": `${usedPrefix}aeditor` },
+                                            { "header": "DOWNLOAD MENUS", "title": "📥 Download Menu", "description": "Media download tools", "id": `${usedPrefix}dlmenu` },
                                             
                                             // ANIME
-                                            { "header": "ANIME", "title": "🍥 Anime Menu", "description": "Anime content", "id": `${usedPrefix}animemenu` },
-                                            { "header": "ANIME", "title": "ℹ️ Anime Info", "description": "Anime information", "id": `${usedPrefix}infoanime` },
+                                            { "header": "ANIME MENUS", "title": "🍥 Anime Menu", "description": "Anime content", "id": `${usedPrefix}animemenu` },
+                                            { "header": "ANIME INFO", "title": "ℹ️ Anime Info", "description": "Anime information", "id": `${usedPrefix}infoanime` },
                                             
                                             // FUN & GAMES
-                                            { "header": "FUN & GAMES", "title": "🎭 Fun Menu", "description": "Fun commands", "id": `${usedPrefix}funmenu` },
-                                            { "header": "FUN & GAMES", "title": "🎮 Games Menu", "description": "Interactive games", "id": `${usedPrefix}gamesmenu` },
-                                            { "header": "FUN & GAMES", "title": "🖼️ Random Pic", "description": "Random images", "id": `${usedPrefix}randompic` },
-                                            { "header": "FUN & GAMES", "title": "🎥 Random Vid", "description": "Random videos", "id": `${usedPrefix}randomvid` },
-                                            { "header": "FUN & GAMES", "title": "💞 Reactions", "description": "Reaction commands", "id": `${usedPrefix}reactions` },
+                                            { "header": "FUN MENUS", "title": "🎭 Fun Menu", "description": "Fun commands", "id": `${usedPrefix}funmenu` },
+                                            { "header": "GAMES MENUS", "title": "🎮 Games Menu", "description": "Interactive games", "id": `${usedPrefix}gamesmenu` },
+                                            { "header": "RANDOM PICS", "title": "🖼️ Random Pic", "description": "Random images", "id": `${usedPrefix}randompic` },
+                                            { "header": "RANDOM VIDEOS", "title": "🎥 Random Vid", "description": "Random videos", "id": `${usedPrefix}randomvid` },
+                                            { "header": "REACTIONS", "title": "💞 Reactions", "description": "Reaction commands", "id": `${usedPrefix}reactions` },
                                             
                                             // CREATION TOOLS
-                                            { "header": "CREATION TOOLS", "title": "🖍️ Fancy Text", "description": "Text styling", "id": `${usedPrefix}fancy` },
-                                            { "header": "CREATION TOOLS", "title": "✏️ Text Pro", "description": "Advanced text tools", "id": `${usedPrefix}textpro` },
-                                            { "header": "CREATION TOOLS", "title": "🏵️ Logo Menu", "description": "Logo creation", "id": `${usedPrefix}logomenu` },
-                                            { "header": "CREATION TOOLS", "title": "🖌️ Maker Menu", "description": "Content creation", "id": `${usedPrefix}makermenu` },
-                                            { "header": "CREATION TOOLS", "title": "🖼️ Image Menu", "description": "Image tools", "id": `${usedPrefix}imagen` },
-                                            { "header": "CREATION TOOLS", "title": "🫐 Sticker Menu", "description": "Sticker tools", "id": `${usedPrefix}stickermenu` },
+                                            { "header": "FANCY TEXT", "title": "🖍️ Fancy Text", "description": "Text styling", "id": `${usedPrefix}fancy` },
+                                            { "header": "TEXT PRO", "title": "✏️ Text Pro", "description": "Advanced text tools", "id": `${usedPrefix}textpro` },
+                                            { "header": "LOGO MENUS", "title": "🏵️ Logo Menu", "description": "Logo creation", "id": `${usedPrefix}logomenu` },
+                                            { "header": "MAKER MENUS", "title": "🖌️ Maker Menu", "description": "Content creation", "id": `${usedPrefix}makermenu` },
+                                            { "header": "IMAGE MENUS", "title": "🖼️ Image Menu", "description": "Image tools", "id": `${usedPrefix}imagen` },
+                                            { "header": "STICKER MENUS", "title": "🫐 Sticker Menu", "description": "Sticker tools", "id": `${usedPrefix}stickermenu` },
                                             
                                             // UTILITIES
-                                            { "header": "UTILITIES", "title": "🧰 Tools Menu", "description": "Utility tools", "id": `${usedPrefix}toolsmenu` },
-                                            { "header": "UTILITIES", "title": "💰 Economy", "description": "Virtual economy", "id": `${usedPrefix}economy` },
-                                            { "header": "UTILITIES", "title": "📜 List Menu", "description": "Command lists", "id": `${usedPrefix}listmenu` },
-                                            { "header": "UTILITIES", "title": "📚 Study Menu", "description": "Educational tools", "id": `${usedPrefix}studymenu` },
+                                            { "header": "TOOL MENUS", "title": "🧰 Tools Menu", "description": "Utility tools", "id": `${usedPrefix}toolsmenu` },
+                                            { "header": "ECONOMY MENUS", "title": "💰 Economy", "description": "Virtual economy", "id": `${usedPrefix}economy` },
+                                            { "header": "LIST MENUS", "title": "📜 List Menu", "description": "Command lists", "id": `${usedPrefix}listmenu` },
+                                            { "header": "STUDY MENUS", "title": "📚 Study Menu", "description": "Educational tools", "id": `${usedPrefix}studymenu` },
                                             
                                             // SETTINGS
                                             { "header": "SETTINGS", "title": "⚙️ Enable/Disable", "description": "Toggle features", "id": `${usedPrefix}enable` },
-                                            { "header": "SETTINGS", "title": "🔒 Privacy", "description": "Privacy settings", "id": `${usedPrefix}setprivacy` },
-                                            { "header": "SETTINGS", "title": "🧩 Plugins", "description": "Plugin management", "id": `${usedPrefix}listplugin` },
+                                            { "header": "PRIVACY", "title": "🔒 Privacy", "description": "Privacy settings", "id": `${usedPrefix}setprivacy` },
+                                            { "header": "ALL PLUGINS", "title": "🧩 Plugins", "description": "Plugin management", "id": `${usedPrefix}listplugin` },
                                             
                                             // SPECIAL
-                                            { "header": "SPECIAL", "title": "📖 Quran Menu", "description": "Islamic resources", "id": `${usedPrefix}quranmenu` },
-                                            { "header": "SPECIAL", "title": "🌙 NSFW Menu", "description": "Adult content (18+)", "id": `${usedPrefix}nsfwmenu` },
-                                            { "header": "SPECIAL", "title": "🤖 Auto React", "description": "Automatic reactions", "id": `${usedPrefix}autoreact` }
+                                            { "header": "QURAN PAK", "title": "📖 Quran Menu", "description": "Islamic resources", "id": `${usedPrefix}quranmenu` },
+                                            { "header": "NSFW MENUS", "title": "🌙 NSFW Menu", "description": "Adult content (18+)", "id": `${usedPrefix}nsfwmenu` },
+                                            { "header": "AUTOMATIC REACTION", "title": "🤖 Auto React", "description": "Automatic reactions", "id": `${usedPrefix}autoreact` }
                                         ]
                                     }]
                                 })
