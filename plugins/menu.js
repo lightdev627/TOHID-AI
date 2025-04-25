@@ -43,8 +43,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
     let str = `
-🚀 *_Buckle up ${name}, ${greeting}! We're going on an adventure!_* 🚀
-📋 *_Quote of the day: ${quote}_* 📋
+🚀 *_Buckle up ${name}, ${greeting}! We're going on an adventure!* 🚀
 ◈╭──❍「 *USER INFO* 」❍
 ◈├• 🦸 *Owner:* ${OwnerName}
 ◈├• 🏆 *Rank:* ${role}
