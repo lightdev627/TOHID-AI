@@ -43,28 +43,21 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
     let str = `❤️ *_Hello ${name}, ${greeting}! Welcome to my menu!* 🥳
-╭═══〘 𝑺𝑰𝑳𝑽𝑨 𝑩𝑶𝑻 〙═══⊷❍
-┃✰│━━━❮❮ CMD LINE ❯❯━━━━━━
-┃✰│𝙽𝚊𝚖𝚎: ${global.author}
-┃✰│𝚃𝚘𝚝𝚊𝚕: 700+ Features
-┃✰│Network:LTE
-┃✰│ᴠᴇʀꜱɪᴏɴ: BETA
-┃✰│ᴏᴡɴᴇʀ : *𝕊𝕀𝕃𝕍𝔸*
-┃✰│ɴᴜᴍʙᴇʀ: 254743706010
-┃✰│HOSTER: *Silva Platform*
-┃✰│ᴍᴏᴅᴇ: *Unkown*
-┃✰│ᴘʀᴇғɪx: *Multi-Prefix*
-┃✰│Uptime: ${uptime}
-┃✰│Today's Date: ${date}
-┃✰│Current Time: ${wib}
-┃✰│──────────●●►
-┃✰│𝕏 https://x.com/@silva_african
-┃✰│   ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃✰│   ▎▍▌▌▉▏▎▌▉▐▏▌▎
-┃✰│   ©𝐒𝐈𝐋𝐕𝐀 𝐌𝐃 𝐁𝐎𝐓
-╰──────────────────
-Thank you for choosing silva md
-powered by Sylivanus❤️
+◈╭──❍「 *USER INFO* 」❍
+◈├• 🦸 *Owner:* ${OwnerName}
+◈├• 🏆 *Rank:* ${role}
+◈├• 🎮 *XP:* ${exp} 
+◈├• 🎩 *USER*:${username}
+◈╰─┬─★─☆──♪♪─❍
+◈╭─┴❍「 *BOT STATUS* 」❍
+◈├• 📆  *Date:* ${date}
+◈├• ⏲️  *Time:* ${wib}
+◈├• 🤡  *Bot:* ${botname} 
+◈├• 📣  *Prefix:* ${usedPrefix} 
+◈├• 🕓  *Uptime:* ${uptime}
+◈├• 💌  *Database:* ${rtotalreg} of ${totaluser} 
+◈├• 📚  *Total Users:* ${totaluser}
+◈╰─┬─★─☆──♪♪─❍
 ─═✧✧═─ 𝕊𝕀𝕃𝕍𝔸 𝔹𝕆𝕋 ─═✧✧═─`
 
     let msg = generateWAMessageFromContent(m.chat, {
@@ -138,7 +131,7 @@ powered by Sylivanus❤️
 
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['menu', 'help', 'h', 'commands']
+handler.command = ['menu2', 'help2', 'h2', 'commands2']
 
 export default handler
 
