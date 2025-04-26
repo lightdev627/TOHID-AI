@@ -50,7 +50,7 @@ let str = `
 ◈╭─┴❍「 *BOT STATUS* 」❍
 ◈├• 📆  *Date:* ${date}
 ◈├• ⏲️  *Time:* ${wib}
-◈├• 🤡  *Bot:* ${botname} 
+◈├• 🤡  *Bot:* ${BOTNAME} 
 ◈├• 📣  *Prefix:* ${usedPrefix} 
 ◈├• 🕓  *Uptime:* ${uptime}
 ◈├• 💌  *Database:* ${rtotalreg} of ${totaluser} 
@@ -93,50 +93,181 @@ let str = `
 ◈├• *quranmenu*
 ◈├• *studymenu*
 ◈╰─♪♪─★─☆──♪♪─❍
-© *TOHID-AI*
+© *${BOTNAME}*
 
 > 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
 `
 
-    
+    // Create interactive message with buttons
+    const buttonMessage = {
+        image: { url: pp },
+        caption: str.trim(),
+        footer: `*${BOTNAME}*`,
+        headerType: 4,
+        nativeFlowMessage: {
+            buttons: [
+                {
+                    name: "single_select",
+                    buttonParamsJson: JSON.stringify({
+                        title: "TAP TO OPEN",
+                        sections: [{
+                            title: "HERE IS ALL MENU CATEGORIES",
+                            highlight_label: BOTNAME,
+                            rows: [
+                                // MAIN MENUS
+                                { "header": "BOT MENUS", "title": "🤖 Bot Menu", "description": "The Bot's control panel", "id": `${usedPrefix}botmenu` },
+                                { "header": "OWNER MENUS", "title": "👑 Owner Menu", "description": "For the bot owner", "id": `${usedPrefix}ownermenu` },
+                                { "header": "GROUP MENUS", "title": "👥 Group Menu", "description": "Group management tools", "id": `${usedPrefix}groupmenu` },
+                                
+                                // AI & MEDIA
+                                { "header": "AI MENUS", "title": "🧠 AI Menu", "description": "AI-powered features", "id": `${usedPrefix}aimenu` },
+                                { "header": "AUDIO EDITORS", "title": "🎧 Audio Editor", "description": "Audio editing tools", "id": `${usedPrefix}aeditor` },
+                                { "header": "DOWNLOAD MENUS", "title": "📥 Download Menu", "description": "Media download tools", "id": `${usedPrefix}dlmenu` },
+                                
+                                // ANIME
+                                { "header": "ANIME MENUS", "title": "🍥 Anime Menu", "description": "Anime content", "id": `${usedPrefix}animemenu` },
+                                { "header": "ANIME INFO", "title": "ℹ️ Anime Info", "description": "Anime information", "id": `${usedPrefix}infoanime` },
+                                
+                                // FUN & GAMES
+                                { "header": "FUN MENUS", "title": "🎭 Fun Menu", "description": "Fun commands", "id": `${usedPrefix}funmenu` },
+                                { "header": "GAMES MENUS", "title": "🎮 Games Menu", "description": "Interactive games", "id": `${usedPrefix}gamesmenu` },
+                                { "header": "RANDOM PICS", "title": "🖼️ Random Pic", "description": "Random images", "id": `${usedPrefix}randompic` },
+                                { "header": "RANDOM VIDEOS", "title": "🎥 Random Vid", "description": "Random videos", "id": `${usedPrefix}randomvid` },
+                                { "header": "REACTIONS", "title": "💞 Reactions", "description": "Reaction commands", "id": `${usedPrefix}reactions` },
+                                
+                                // CREATION TOOLS
+                                { "header": "FANCY TEXT", "title": "🖍️ Fancy Text", "description": "Text styling", "id": `${usedPrefix}fancy` },
+                                { "header": "TEXT PRO", "title": "✏️ Text Pro", "description": "Advanced text tools", "id": `${usedPrefix}textpro` },
+                                { "header": "LOGO MENUS", "title": "🏵️ Logo Menu", "description": "Logo creation", "id": `${usedPrefix}logomenu` },
+                                { "header": "MAKER MENUS", "title": "🖌️ Maker Menu", "description": "Content creation", "id": `${usedPrefix}makermenu` },
+                                { "header": "IMAGE MENUS", "title": "🖼️ Image Menu", "description": "Image tools", "id": `${usedPrefix}imagen` },
+                                { "header": "STICKER MENUS", "title": "🫐 Sticker Menu", "description": "Sticker tools", "id": `${usedPrefix}stickermenu` },
+                                
+                                // UTILITIES
+                                { "header": "TOOL MENUS", "title": "🧰 Tools Menu", "description": "Utility tools", "id": `${usedPrefix}toolsmenu` },
+                                { "header": "ECONOMY MENUS", "title": "💰 Economy", "description": "Virtual economy", "id": `${usedPrefix}economy` },
+                                { "header": "LIST MENUS", "title": "📜 List Menu", "description": "Command lists", "id": `${usedPrefix}listmenu` },
+                                { "header": "STUDY MENUS", "title": "📚 Study Menu", "description": "Educational tools", "id": `${usedPrefix}studymenu` },
+                                
+                                // SETTINGS
+                                { "header": "SETTINGS", "title": "⚙️ Enable/Disable", "description": "Toggle features", "id": `${usedPrefix}enable` },
+                                { "header": "PRIVACY", "title": "🔒 Privacy", "description": "Privacy settings", "id": `${usedPrefix}setprivacy` },
+                                { "header": "ALL PLUGINS", "title": "🧩 Plugins", "description": "Plugin management", "id": `${usedPrefix}listplugin` },
+                                
+                                // SPECIAL
+                                { "header": "QURAN PAK", "title": "📖 Quran Menu", "description": "Islamic resources", "id": `${usedPrefix}quranmenu` },
+                                { "header": "NSFW MENUS", "title": "🌙 NSFW Menu", "description": "Adult content (18+)", "id": `${usedPrefix}nsfwmenu` },
+                                { "header": "AUTOMATIC REACTION", "title": "🤖 Auto React", "description": "Automatic reactions", "id": `${usedPrefix}autoreact` }
+                            ]
+                        }]
+                    })
+                },
+                // Quick Reply Buttons
+                {
+                    name: "quick_reply",
+                    buttonParamsJson: JSON.stringify({
+                        display_text: "📜 ALL MENU",
+                        id: `${usedPrefix}allmenu`
+                    })
+                },
+                {
+                    name: "quick_reply",
+                    buttonParamsJson: JSON.stringify({
+                        display_text: "📱 MENU2",
+                        id: `${usedPrefix}menu2`
+                    })
+                },
+                {
+                    name: "quick_reply",
+                    buttonParamsJson: JSON.stringify({
+                        display_text: "📲 MENU3",
+                        id: `${usedPrefix}menu3`
+                    })
+                },
+                {
+                    name: "quick_reply",
+                    buttonParamsJson: JSON.stringify({
+                        display_text: "📶 MENU4",
+                        id: `${usedPrefix}menu4`
+                    })
+                },
+                
+                // URL Buttons
+                {
+                    name: "cta_url",
+                    buttonParamsJson: JSON.stringify({
+                        display_text: "🌟 OWNER",
+                        url: "https://wa.me/message/O6KWTGOGTVTYO1"
+                    })
+                },
+                {
+                    name: "cta_url",
+                    buttonParamsJson: JSON.stringify({
+                        display_text: "💻 SOURCE",
+                        url: "https://github.com/Tohidkhan6332/TOHID-AI"
+                    })
+                },
+                {
+                    name: "cta_url",
+                    buttonParamsJson: JSON.stringify({
+                        display_text: "👥 GROUP",
+                        url: "https://chat.whatsapp.com/IqRWSp7pXx8DIMtSgDICGu"
+                    })
+                },
+                {
+                    name: "cta_url",
+                    buttonParamsJson: JSON.stringify({
+                        display_text: "📢 CHANNEL",
+                        url: "https://whatsapp.com/channel/0029VaGyP933bbVC7G0x0i2T"
+                    })
+                },
+                {
+                    name: "cta_url",
+                    buttonParamsJson: JSON.stringify({
+                        display_text: "📚 DOCS",
+                        url: "https://github.com/Tohidkhan6332/TOHID-AI#readme"
+                    })
+                }
+            ]
+        }
+    }
 
-       // await conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12, pp13, pp14, pp15].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
-    
-
-
-   conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, null, canal)
+    await conn.sendMessage(m.chat, buttonMessage, { quoted: m })
     m.react(done)
-
 }
+
 handler.help = ['main']
 handler.tags = ['group']
 handler.command = ['menu', 'help'] 
 
 export default handler
+
 function clockString(ms) {
     let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
     let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
     let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-    return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
-    
-    function ucapan() {
-      const time = moment.tz('Asia/Kolkata').format('HH')
-      let res = "happy early in the day☀️"
-      if (time >= 4) {
+    return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+}
+
+function ucapan() {
+    const time = moment.tz('Asia/Kolkata').format('HH')
+    let res = "happy early in the day☀️"
+    if (time >= 4) {
         res = "Good Morning 🌄"
-      }
-      if (time >= 10) {
-        res = "Good Afternoon ☀️"
-      }
-      if (time >= 15) {
-        res = "Good Afternoon 🌇"
-      }
-      if (time >= 18) {
-        res = "Good Night 🌙"
-      }
-      return res
     }
-    const quotes = [
+    if (time >= 10) {
+        res = "Good Afternoon ☀️"
+    }
+    if (time >= 15) {
+        res = "Good Afternoon 🌇"
+    }
+    if (time >= 18) {
+        res = "Good Night 🌙"
+    }
+    return res
+}
+
+const quotes = [
       "I'm not lazy, I'm just on my energy saving mode.",
       "Life is short, smile while you still have teeth.",
       "I may be a bad influence, but darn I am fun!",
