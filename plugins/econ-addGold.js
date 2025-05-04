@@ -1,26 +1,54 @@
 let handler = async (m, { conn, text }) => {
-  let who
-  if (m.isGroup) who = m.mentionedJid[0]
-  else who = m.chat
-  if (!who) throw '✳️ tag the user'
-  let txt = text.replace('@' + who.split`@`[0], '').trim()
-  if (!txt) throw '✳️ Enter the amount of *Gold* you want to add'
-  if (isNaN(txt)) throw '🔢 only numbers'
-  let dmt = parseInt(txt)
-  let diamond = dmt
+  let who = m.isGroup ? m.mentionedJid[0] : m.chat
+  if (!who) throw '✳️ Please tag the user to add Gold.'
 
-  if (diamond < 1) throw '✳️ Mínimum  *1*'
+  let txt = text.replace('@' + who.split('@')[0], '').trim()
+  if (!txt) throw '✳️ Enter the amount of *Gold* to add.'
+  if (isNaN(txt)) throw '🔢 Numbers only, please.'
+
+  let amount = parseInt(txt)
+  if (amount < 1) throw '✳️ Minimum amount is *1* Gold.'
+
   let users = global.db.data.users
-  users[who].credit += dmt
+  users[who].credit += amount
 
-  await m.reply(`≡ *Gold ADDED*
-┌──────────────
-▢ *Total:* ${dmt}
-└──────────────`)
-  conn.fakeReply(m.chat, `▢ Did you receive \n\n *+${dmt}* Gold`, who, m.text)
+  await m.reply(
+    `🎖️ *Gold Added Successfully*\n\n▢ *User:* @${who.split('@')[0]}\n▢ *Amount:* +${amount} Gold`,
+    null,
+    {
+      mentions: [who],
+      contextInfo: {
+        forwardingScore: 999,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: '120363207624903731@newsletter',
+          serverMessageId: '',
+          newsletterName: '𝐓𝐎𝐇𝐈𝐃 𝐓𝐄𝐂𝐇 🤖'
+        }
+      }
+    }
+  )
+
+  await conn.sendMessage(
+    m.chat,
+    {
+      text: `🪙 *You have received +${amount} Gold!*`,
+      mentions: [who],
+      contextInfo: {
+        forwardingScore: 999,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: '120363207624903731@newsletter',
+          serverMessageId: '',
+          newsletterName: '𝐓𝐎𝐇𝐈𝐃 𝐓𝐄𝐂𝐇 🤖'
+        }
+      }
+    },
+    { quoted: m }
+  )
 }
 
-handler.help = ['addgold <@user>']
+handler.help = ['addgold <@user> <amount>']
 handler.tags = ['economy']
 handler.command = ['addgold']
 handler.rowner = true
