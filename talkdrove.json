@@ -7,110 +7,160 @@
     "owner-verification":"mrsanjayyadav7846@gmail.com",
   
       "env": {
-    "SESSION_ID": {
-      "description": "put your session ID here in the box below",
+    "OWNERS": {
+      "description": "owner numbers",
       "required": true,
-      "value": ""
+      "value": "917849917350;𝐓𝐎𝐇𝐈𝐃-𝐀𝐈"
     },
-    "BOT_NAME": {
-      "description": "put your BOT a name",
+    "BOTNAME": {
+      "description": "Give your BOT a name",
       "required": true,
-      "value": "TOHID-AI"
-    },
-    "OWNER_NUMBER": {
-      "description": "put your Number and name for Owner",
-      "required": true,
-      "value": "917849917350"
-    },
-    "owner_react_emojie": {
-      "description": "put one emojie for owner reacts",
-      "required": false,
-      "value": "🤍"
-    },
-    "MODE": {
-      "description": "choose bot mode public or private",
-      "required": true,
-      "value": "public"
-    },
-    "PREFIX": {
-      "description": "put any one symbol here leave it Blank if you want to use multiple prefix",
-      "required": false,
-      "value": "" 
-    },
-    "antidelete": {
-      "description": "Set 'private' to forward deleted messages only from private chats, 'all' to forward from both private and group chats, or 'false' to disable this feature.",
-      "required": false,
-      "value": "all"
+      "value": "TOHID-AI©®"
     },
     "DATABASE_URL": {
-      "description": "put mongodb or postgres or princedb database url for bots better performance",
+      "description": "your mongodb database url",
       "required": false,
       "value": ""
     },
-    "ANTI_LINK": {
-      "description": "it will dlt links and kick user",
+    "SESSION_ID": {
+      "description": "your session id. get session here https://tohid-ai-pair1-a0c7bc9ba92a.herokuapp.com/",
+      "required": true,
+      "value": ""
+    },
+    "MODE": {
+      "description": "mode public or private",
+      "required": true,
+      "value": ""
+    },
+    "PREFIX": {
+      "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
+      "required": false,
+      "value": ""
+    },
+     "HKEY": {
+      "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
+      "required": true,
+      "value": ""
+    },
+     "HAPP": {
+      "description": "Put the Heroku app name, same as above entered",
+      "required": true,
+      "value": ""
+    },
+    "statusview": {
+      "description": "make it true if you want bot to view status",
+      "required": false,
+      "value": ""
+    },
+    "autoRead": {
+      "description": "make it true or false if you want bot to read messages leave it blank if you don't want it to read messages",
+      "required": false,
+      "value": ""
+      },
+    "WELCOME_MSG": {
+      "description": "make it true or false if you want bot to Send welcome message when someone joins a group",
       "required": false,
       "value": "true"
-    },
-    "AutoReaction": {
-      "description": "make it true to react on chats",
+      },
+    "GOODBYE_MSG": {
+      "description": "make it true or false if you want bot to Send goodbye message when someone leaves a group",
       "required": false,
+      "value": "true"
+      },
+    "ANTILINK": {
+      "description": "make it true or false if you want bot to delete group links sent in groups. of you are admin",
+      "required": false,
+      "value": "true"
+      },
+    "AUTO_RECORDING": {
+      "description": "make it true or false. true to activate false to deactivate",
+      "required": false,
+      "value": "true"
+       },
+    "AUTO_TYPING": {
+      "description": "make it true or false. true to activate false to deactivate",
+      "required": false,
+      "value": "true"
+       },
+    "AUTO_STATUS_LIKE": {
+      "description": "make it true or false. true to activate false to deactivate",
+      "required": true,
+      "value": "true"
+       },
+    "AUTO_STATUS_LIKE_EMOJI": {
+      "description": "customize to any emoji you need 💚",
+      "required": false,
+      "value": "🦋"
+       },
+    "STATUS_REPLY": {
+      "description": "make it true or false. true to activate false to deactivate",
+      "required": true,
       "value": "false"
-    },
-    "autoreactions_emojies": {
-      "description": "put your favourite emojies for AutoReactions on chats or make it empty for all default emojies",
-      "required": false,
-      "value": "💛,🤍,💗,♥️,💞"
-    },
-    "VAR_APP": {
-      "description": "put same app name you entered above",
-      "required": true,
-      "value": ""
-    },
-    "VAR_KEY": {
-      "description": "put heroku key click on accounts scroll down copy that key past here",
-      "required": true,
-      "value": ""
-    },
-    "STATUSVIEW": {
-      "description": "make it true to auto view status and likes",
-      "required": false,
-      "value": "true"
-    },
-    "StatusEmojies": {
-      "description": "Add your favorites emojies for status likes",
-      "required": false,
-      "value": "♥️,🤗,❤️,💞,❣️,💙,💛,🤍,💚,😍,🥰,💝,💖,💗,💓,💞,💕,❣️,💘,💟,🖤,🤎,💜,💫,🌸"
-    },
+       },
     "STATUS_MSG": {
-      "description": "Status reply msg",
+      "description": "custmize with your message",
       "required": false,
-      "value": "Your Status has been seen by Prince bot"
+      "value": "TOHID-AI BOT SUCCESSFULLY VIEWED YOUR STATUS 💖💚"
     },
-    "REJECTSCALLS": {
-      "description": "reject calls",
+    "antidelete": {
+      "description": "bot will forward deleted messages if you make it true",
       "required": false,
       "value": "false"
     },
-    "CALLMSG": {
-      "description": "Call msg for reject calls",
+    "HOBBIES": {
+      "description": "owners hobby for intro card",
       "required": false,
-      "value": "For now calls are restricted by my owner"
+      "value": "CODING"
     },
-    "ANTIFAKE_USERS": {
-      "description": "Add numbers to a variable. The bot will remove users from the group for these numbers. If a number isn’t in the variable, the bot will not take any action. To target all numbers, use this format: 1,2,3,4,5,6,7,8,9. ",
+    "LANGUAGE": {
+      "description": "owners native language for intro",
       "required": false,
-      "value": "1,212,63,44"
+      "value": "ENGLISH"
     },
-    "PACK_NAME": {
-      "description": "put your stickers pack name",
+    "OWNER_SKILLS": {
+      "description": "skills for intro",
       "required": false,
-      "value": "Mr Tohid"
+      "value": "JAVASCRIPT"
     },
-    "DL_MSG": {
-      "description": "Video downloader caption",
+    "OWNER_STATUS": {
+      "description": "current status for intro",
+      "required": false,
+      "value": "DEVELOPER"
+    },
+    "TIME_ZONE": {
+      "description": "your time zone",
       "required": true,
-      "value": "_*📥DOWNLOADED SUCCESSFULLY✅*_"
-    } 
+      "value": "Africa/Nairobi"
+    },
+    "OWNER_NAME": {
+      "description": "your owner Name",
+      "required": false,
+      "value": ""
+    },
+     "REMOVEBG_KEY": {
+      "description": "your Remove background api key",
+      "required": false,
+      "value": ""
+    }
+    },
+    "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
   }
 }

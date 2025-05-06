@@ -12,14 +12,14 @@
   "stack": "container",
   "env": {
     "OWNERS": {
-      "description": "owner number",
+      "description": "owner numbers",
       "required": true,
-      "value": ""
+      "value": "917849917350;𝐓𝐎𝐇𝐈𝐃-𝐀𝐈"
     },
     "BOTNAME": {
       "description": "Give your BOT a name",
       "required": true,
-      "value": "TOHID-AI"
+      "value": "TOHID-AI©®"
     },
     "DATABASE_URL": {
       "description": "your mongodb database url",
@@ -27,7 +27,7 @@
       "value": ""
     },
     "SESSION_ID": {
-      "description": "your session id",
+      "description": "your session id. get session here https://tohid-ai-pair1-a0c7bc9ba92a.herokuapp.com/",
       "required": true,
       "value": ""
     },
@@ -55,6 +55,56 @@
       "description": "make it true if you want bot to view status",
       "required": false,
       "value": ""
+    },
+    "autoRead": {
+      "description": "make it true or false if you want bot to read messages leave it blank if you don't want it to read messages",
+      "required": false,
+      "value": ""
+      },
+    "WELCOME_MSG": {
+      "description": "make it true or false if you want bot to Send welcome message when someone joins a group",
+      "required": false,
+      "value": "true"
+      },
+    "GOODBYE_MSG": {
+      "description": "make it true or false if you want bot to Send goodbye message when someone leaves a group",
+      "required": false,
+      "value": "true"
+      },
+    "ANTILINK": {
+      "description": "make it true or false if you want bot to delete group links sent in groups. of you are admin",
+      "required": false,
+      "value": "true"
+      },
+    "AUTO_RECORDING": {
+      "description": "make it true or false. true to activate false to deactivate",
+      "required": false,
+      "value": "true"
+       },
+    "AUTO_TYPING": {
+      "description": "make it true or false. true to activate false to deactivate",
+      "required": false,
+      "value": "true"
+       },
+    "AUTO_STATUS_LIKE": {
+      "description": "make it true or false. true to activate false to deactivate",
+      "required": true,
+      "value": "true"
+       },
+    "AUTO_STATUS_LIKE_EMOJI": {
+      "description": "customize to any emoji you need 💚",
+      "required": false,
+      "value": "🦋"
+       },
+    "STATUS_REPLY": {
+      "description": "make it true or false. true to activate false to deactivate",
+      "required": true,
+      "value": "false"
+       },
+    "STATUS_MSG": {
+      "description": "custmize with your message",
+      "required": false,
+      "value": "TOHID-AI BOT SUCCESSFULLY VIEWED YOUR STATUS 💖💚"
     },
     "antidelete": {
       "description": "bot will forward deleted messages if you make it true",
