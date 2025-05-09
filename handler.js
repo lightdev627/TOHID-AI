@@ -7,37 +7,6 @@ import chalk from 'chalk'
 import fetch from 'node-fetch'
 import Pino from 'pino'
 
-
-// Enable anti-link with mode selection
-if (command === 'antilink') {
-  if (!m.isGroup) return m.reply('This command only works in groups!');
-  if (!isAdmin) return m.reply('Only admins can use this command!');
-  
-  const mode = args[0]?.toLowerCase(); // 'delete', 'warn', or 'kick'
-  const validModes = ['delete', 'warn', 'kick'];
-  
-  if (!mode || !validModes.includes(mode)) {
-    return m.reply(`Please specify a valid mode:\n\nAvailable modes: ${validModes.join(', ')}\nExample: ${prefix}antilink warn/kick/delete`);
-  }
-  
-  if (!global.db.data.chats[m.chat]) global.db.data.chats[m.chat] = {};
-  global.db.data.chats[m.chat].antiLink = true;
-  global.db.data.chats[m.chat].antiLinkMode = mode;
-  
-  m.reply(`Anti-link enabled in ${mode} mode!`);
-}
-
-// Disable anti-link
-if (command === 'antilinkoff') {
-  if (!m.isGroup) return m.reply('This command only works in groups!');
-  if (!isAdmin) return m.reply('Only admins can use this command!');
-  
-  if (!global.db.data.chats[m.chat]) global.db.data.chats[m.chat] = {};
-  global.db.data.chats[m.chat].antiLink = false;
-  
-  m.reply('Anti-link disabled!');
-}
-
 /**
  * @type {import("@whiskeysockets/baileys")}
  */
