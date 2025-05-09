@@ -1,66 +1,63 @@
-const linkRegex = /(?:chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})|https:\/\/whatsapp\.com\/channel\/[0-9A-Za-z]+)/i;
+const linkRegex = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i
+
+// Store warning counts per user per group (chatId_senderId)
+const warningCounts = new Map();
 
 export async function before(m, { conn, isAdmin, isBotAdmin }) {
-    if (m.isBaileys && m.fromMe) return true;
-    if (!m.isGroup) return false;
+  if (m.isBaileys && m.fromMe) return !0;
+  if (!m.isGroup) return !1;
+  if (process.env.ANTILINK !== "true") return !0;
 
-    let chat = global.db.data.chats[m.chat];
-    if (typeof chat !== 'object') global.db.data.chats[m.chat] = {};
-    chat = global.db.data.chats[m.chat];
+  let chat = global.db.data.chats[m.chat];
+  let bot = global.db.data.settings[this.user.jid] || {};
+  const isGroupLink = linkRegex.exec(m.text);
 
-    // Check if message contains a group link and antiLink is enabled
-    const isGroupLink = linkRegex.exec(m.text);
-    if (!chat.antiLink || !isGroupLink || isAdmin) return true;
-
-    const linkThisGroup = `https://chat.whatsapp.com/${await conn.groupInviteCode(m.chat)}`;
-    if (m.text.includes(linkThisGroup)) return true; // Allow same group link
-
-    if (!isBotAdmin) {
-        console.log("Bot is not an admin, cannot take action.");
-        return true;
+  if (chat.antiLink && isGroupLink && !isAdmin) {
+    if (isBotAdmin) {
+      const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`;
+      if (m.text.includes(linkThisGroup)) return !0;
     }
 
-    // Different anti-link modes
-    const antiLinkMode = chat.antiLinkMode || 'delete'; // Default: delete only
-    const sender = m.sender;
+    // Create unique key for this user in this group
+    const warningKey = `${m.chat}_${m.sender}`;
+    // Get current warnings or default to 0
+    const currentWarnings = warningCounts.get(warningKey) || 0;
 
-    switch (antiLinkMode) {
-        case 'delete': // Just delete the message
-            await conn.sendMessage(m.chat, { delete: m.key });
-            break;
+    if (currentWarnings < 3) {
+      // Increment warning count
+      warningCounts.set(warningKey, currentWarnings + 1);
 
-        case 'warn': // Delete + 3 warnings before kick
-            if (!chat.warnedUsers) chat.warnedUsers = {};
-            if (!chat.warnedUsers[sender]) chat.warnedUsers[sender] = 0;
+      await conn.reply(
+        m.chat,
+        `*⚠️ Link Detected - Warning ${currentWarnings + 1}/3*\n\n` +
+        `@${m.sender.split('@')[0]}, sharing group links is not allowed!\n` +
+        `Next violation will result in ${currentWarnings === 2 ? 'removal from the group' : 'another warning'}.`,
+        null,
+        { mentions: [m.sender] }
+      );
 
-            chat.warnedUsers[sender]++;
-            const warnings = chat.warnedUsers[sender];
+      // Delete the link message if bot is admin
+      if (isBotAdmin) {
+        await conn.sendMessage(m.chat, { delete: m.key });
+      }
+    } else {
+      // Fourth violation - remove user
+      await conn.reply(
+        m.chat,
+        `*🚫 Final Warning*\n\n` +
+        `@${m.sender.split('@')[0]} has been removed for repeatedly sharing group links.`,
+        null,
+        { mentions: [m.sender] }
+      );
 
-            await conn.sendMessage(m.chat, { delete: m.key });
-            await conn.reply(
-                m.chat,
-                `⚠️ *Link Detected!* (Warning ${warnings}/3)\n@${sender.split('@')[0]}, please avoid sharing group links.`,
-                m,
-                { mentions: [sender] }
-            );
+      if (isBotAdmin) {
+        await conn.sendMessage(m.chat, { delete: m.key });
+        await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
+      }
 
-            if (warnings >= 3) {
-                await conn.groupParticipantsUpdate(m.chat, [sender], 'remove');
-                delete chat.warnedUsers[sender];
-            }
-            break;
-
-        case 'kick': // Direct remove without warning
-            await conn.sendMessage(m.chat, { delete: m.key });
-            await conn.reply(
-                m.chat,
-                `🚫 *Link Detected!*\n@${sender.split('@')[0]} has been removed for sharing a group link.`,
-                m,
-                { mentions: [sender] }
-            );
-            await conn.groupParticipantsUpdate(m.chat, [sender], 'remove');
-            break;
+      // Reset warning count for this user
+      warningCounts.delete(warningKey);
     }
-
-    return true;
+  }
+  return !0;
 }
