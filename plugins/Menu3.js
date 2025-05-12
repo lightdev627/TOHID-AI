@@ -50,7 +50,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ┃◈├•Network:LTE
 ┃◈├•ᴠᴇʀꜱɪᴏɴ: BETA
 ┃◈├•ᴏᴡɴᴇʀ : *𝐌𝐑 𝐓𝐎𝐇𝐈𝐃*
-┃◈├•ɴᴜᴍʙᴇʀ: 254743706010
+┃◈├•ɴᴜᴍʙᴇʀ: 917849917350
 ┃◈├•HOSTER: *Tohid Platform*
 ┃◈├•ᴍᴏᴅᴇ: *Unkown*
 ┃◈├•ᴘʀᴇғɪx: *Multi-Prefix*
@@ -140,7 +140,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['menu7', 'help7', 'h7', 'commands7']
+handler.command = ['menu3', 'help3', 'h3', 'commands3']
 
 export default handler
 
