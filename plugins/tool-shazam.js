@@ -20,7 +20,7 @@ m.reply(txt)
 } else {
 return conn.reply(m.chat, '🚩 Responde to an *Audio/Video.*', m, rcanal)
 }}
-handler.help = ['tohid3 *<Audio/Video>*']
+handler.help = ['shazam *<Audio/Video>*']
 handler.tags = ['tools']
 handler.command = /^(tohid3)$/i
 //handler.limit = 3
