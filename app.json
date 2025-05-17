@@ -1,170 +1,214 @@
 {
-  "name": "whatsapp-Automation",
-  "description": " Whatsapp Ai",
-  "repository": "https://github.com/Tohidkhan6332/TOHID-AI",
-  "logo": "https://i.imgur.com/M1BzE37.jpeg",
-  "success_url": "https://github.com/Tohidkhan6332/TOHID-AI",
-  "keywords": [
-    "whatsapp Ai", "nodejs", "heroku", "bot", "urdu", "english", "indonesian", "arab", "portuguese", "italian", "french", "whatsapp",
-    "termux", "superbot", "multi-device", "md", "official", "javascript", "tohid-ai-bot"
-  ],
-  "repository": "https://github.com/Tohidkhan6332/TOHID-AI",
-  "stack": "container",
+  "name": "TOHID_MD",
+  "description": "Javascript WhatsApp bot made by Tohid Khan",
+  "logo": "https://i.ibb.co/4ZSYvPTq/lordali.jpg",
+  "keywords": ["TOHID_MD"],
+  "success_url": "/",
+
+    "stack": "container",
   "env": {
-    "OWNERS": {
-      "description": "owner numbers",
-      "required": true,
-      "value": "917849917350;𝐓𝐎𝐇𝐈𝐃-𝐀𝐈"
-    },
-    "BOTNAME": {
-      "description": "Give your BOT a name",
-      "required": true,
-      "value": "TOHID-AI©®"
-    },
-    "DATABASE_URL": {
-      "description": "your mongodb database url",
-      "required": false,
-      "value": ""
-    },
     "SESSION_ID": {
-      "description": "your session id. get session here https://tohid-ai-pair1-a0c7bc9ba92a.herokuapp.com/",
+      "description": "Put the session-id here.",
       "required": true,
       "value": ""
-    },
-    "MODE": {
-      "description": "mode public or private",
-      "required": true,
-      "value": ""
-    },
+    },  
+    
+    "STICKER_NAME": {
+      "description": "type your sticker pack name.",
+      "required": false,
+      "value": "TOHID_MD"
+    }, 
+      
     "PREFIX": {
-      "description": "put any one symbol here except @ and + , leave it Blank if you want to use multiple prefix",
+      "description": "paste your bot prefix note! Don't apply null prefix.",
       "required": false,
-      "value": ""
+      "value": "."
     },
-     "HKEY": {
-      "description": "Put your Heroku api key Here , Get one from here https://dashboard.heroku.com/account",
-      "required": true,
-      "value": ""
+    
+    "MODE": {
+      "description": "select your bot work type public-private-inbox-group.",
+      "required": false,
+      "value": "public"
+      
     },
-     "HAPP": {
-      "description": "Put the Heroku app name, same as above entered",
-      "required": true,
-      "value": ""
-    },
-    "statusview": {
-      "description": "make it true if you want bot to view status",
+    
+    
+    "ALWAYS_ONLINE": {
+      "description": "Make it true if want always online.",
       "required": false,
-      "value": ""
-    },
-    "autoRead": {
-      "description": "make it true or false if you want bot to read messages leave it blank if you don't want it to read messages",
-      "required": false,
-      "value": ""
-      },
-    "WELCOME_MSG": {
-      "description": "make it true or false if you want bot to Send welcome message when someone joins a group",
-      "required": false,
-      "value": "true"
-      },
-    "GOODBYE_MSG": {
-      "description": "make it true or false if you want bot to Send goodbye message when someone leaves a group",
-      "required": false,
-      "value": "true"
-      },
-    "ANTILINK": {
-      "description": "make it true or false if you want bot to delete group links sent in groups. of you are admin",
-      "required": false,
-      "value": "true"
-      },
-    "AUTO_RECORDING": {
-      "description": "make it true or false. true to activate false to deactivate",
-      "required": false,
-      "value": "true"
-       },
-    "AUTO_TYPING": {
-      "description": "make it true or false. true to activate false to deactivate",
-      "required": false,
-      "value": "true"
-       },
-    "AUTO_STATUS_LIKE": {
-      "description": "make it true or false. true to activate false to deactivate",
-      "required": true,
-      "value": "true"
-       },
-    "AUTO_STATUS_LIKE_EMOJI": {
-      "description": "customize to any emoji you need 💚",
-      "required": false,
-      "value": "🦋"
-       },
-    "STATUS_REPLY": {
-      "description": "make it true or false. true to activate false to deactivate",
-      "required": true,
-      "value": "false"
-       },
-    "STATUS_MSG": {
-      "description": "custmize with your message",
-      "required": false,
-      "value": "TOHID-AI BOT SUCCESSFULLY VIEWED YOUR STATUS 💖💚"
-    },
-    "antidelete": {
-      "description": "bot will forward deleted messages if you make it true",
+      "value": "false"  
+    },    
+  
+    "AUTO_VOICE": {
+      "description": "Make it true if want automatic voice reply .",
       "required": false,
       "value": "false"
-    },
-    "HOBBIES": {
-      "description": "owners hobby for intro card",
+    }, 
+
+    "AUTO_REPLY": {
+      "description": "Make it true if you want automatic reply.",
       "required": false,
-      "value": "CODING"
-    },
-    "LANGUAGE": {
-      "description": "owners native language for intro",
+      "value": "false"
+    }, 
+
+    "AUTO_STICKER": {
+      "description": "Make it true if you want automatic sticker.",
       "required": false,
-      "value": "ENGLISH"
-    },
-    "OWNER_SKILLS": {
-      "description": "skills for intro",
-      "required": false,
-      "value": "JAVASCRIPT"
-    },
-    "OWNER_STATUS": {
-      "description": "current status for intro",
-      "required": false,
-      "value": "DEVELOPER"
-    },
-    "TIME_ZONE": {
-      "description": "your time zone",
+      "value": "false"
+    }, 
+
+
+    "AUTO_STATUS_SEEN": {
+      "description": "Make it true for automatic status seen.",
       "required": true,
-      "value": "Africa/Nairobi"
-    },
+      "value": "true"
+    }, 
+
+    "AUTO_STATUS_REACT": {
+      "description": "make it true for automatic status reaction or like.",
+      "required": true,
+      "value": "true"
+    }, 
+
+    "AUTO_STATUS_REPLY": {
+      "description": "Make it true for auto reply msg on status seen.",
+      "required": true,
+      "value": "false"
+    }, 
+
+    "AUTO_STATUS_MSG": {
+      "description": "Type custom message on status reply",
+      "required": true,
+      "value": "*SEEN YOUR STATUS BY TOHID_MD 🇮🇳*"
+   
+     }, 
+    
     "OWNER_NAME": {
-      "description": "your owner Name",
+      "description": "Type Bot Owner Name.",
       "required": false,
-      "value": ""
-    },
-     "REMOVEBG_KEY": {
-      "description": "your Remove background api key",
+      "value": "Mr Tohid"
+}, 
+
+    "OWNER_NUMBER": {
+      "description": "put the owner number for bot.",
       "required": false,
-      "value": ""
+      "value": "917849917350"
+
+    }, 
+
+    "BOT_NAME": {
+      "description": "Type here the bot name.",
+      "required": false,
+      "value": "TOHID_MD"
+
+      }, 
+
+    "ANTI_LINK": {
+      "description": "Make it true if you want bot auto remove group link.",
+      "required": true,
+      "value": "true"
+      
+    },
+
+     "ANTI_LINK_KICK": {
+      "description": "Make it true if you want bot auto remove group link.",
+      "required": true,
+      "value": "false"
+      
+    },
+    
+    "ANTI_BAD": {
+      "description": "Make it true if you want bot auto delete bad words.",
+      "required": false,
+      "value": "false"
+    },
+
+   "MENTION_REPLY": {
+      "description": "make it true if want mention reply if someone menetion you.",
+      "required": false,
+      "value": "false"
+    },
+    
+    "MENU_IMAGE_URL": {
+      "description": "add url for mention reply and menu if want.",
+      "required": false,
+      "value": "https://i.ibb.co/4ZSYvPTq/lordali.jpg"
+    },
+    
+     "DESCRIPTION": {
+      "description": "add caption for menu and other",
+      "required": false,
+      "value": "*©𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 𝚃𝙾𝙷𝙸𝙳_𝙼𝙳*"
+    },
+
+      "DELETE_LINKS": {
+      "description": "remove links from group automatically without removing member",
+      "required": false,
+      "value": "false"
+    },
+    
+    "AUTO_RECORDING": {
+      "description": "Make it true if you want auto recoding.",
+      "required": false,
+      "value": "false"
+    },
+
+    "AUTO_TYPING": {
+      "description": "Make it true if you want auto typing.",
+      "required": false,
+      "value": "false"
+    },
+
+    "AUTO_REACT": {
+      "description": "Make it true if you want react on every message.",
+      "required": false,
+      "value": "false"
+    },
+    
+    "CUSTOM_REACT": {
+      "description": "Make it true if you want custom reactions.",
+      "required": false,
+      "value": "false"
+      
+    }, 
+    
+    "CUSTOM_REACT_EMOJIS": {
+      "description": "put here custom react react emojis.",
+      "required": false,
+      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+    }, 
+    
+    "ANTI_DEL_PATH": {
+      "description": "change it to -same- if you want to resend deleted message in same chat",
+      "required": false,
+      "value": "log"
+    }, 
+
+    "ADMIN_EVENTS": {
+      "description": "make it true if want know who promote or demote a member .",
+      "required": false,
+      "value": "false"
+    },
+
+    "WELCOME": {
+      "description": "make it true if want goodbye and welcome message in groups.",
+      "required": false,
+      "value": "true"
+    },
+
+    "READ_MESSAGE": {
+      "description": "Make it true if you want bot read your all sms just now.",
+      "required": false,
+      "value": "false"
     }
-    },
-    "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-    }
-  ],
-  "formation": {
-    "web": {
-      "quantity": 1,
-      "size": "basic"
-    }
-  }
+
+},
+
+     "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+        }
+     ],
+  "stack": "heroku-24"
 }
+  
