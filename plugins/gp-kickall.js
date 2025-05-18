@@ -1,11 +1,17 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
+    // Check if the sender is the bot owner (replace with your number)
+    const ownerNumber = '917849917350@s.whatsapp.net'; // Example: '1234567890@s.whatsapp.net'
+    if (m.sender !== ownerNumber) {
+        return m.reply('🚫 *Permission Denied*: Only the bot owner can use this command.');
+    }
+
     if (!m.isGroup) return m.reply(`✳️ This command can only be used in groups`);
     
-    // Check if user is admin
-    const isAdmin = await conn.groupMetadata(m.chat).then(metadata => 
-        metadata.participants.find(p => p.id === m.sender)?.admin
+    // Check if the bot is an admin (required to kick members)
+    const botAdmin = await conn.groupMetadata(m.chat).then(metadata => 
+        metadata.participants.some(p => p.id === conn.user.jid && p.admin)
     );
-    if (!isAdmin) return m.reply(`✳️ You need to be an admin to use this command`);
+    if (!botAdmin) return m.reply('❌ The bot must be an admin to use this command.');
     
     // Get all participants except bots and the command sender
     const groupMetadata = await conn.groupMetadata(m.chat);
@@ -23,8 +29,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 handler.help = ['kickall']
 handler.tags = ['group']
 handler.command = ['kickall', 'expulsartodos'] 
-handler.admin = true
-handler.group = true
-handler.botAdmin = true
+handler.admin = true       // Ensures sender is at least an admin (though owner check overrides this)
+handler.group = true       // Only works in groups
+handler.botAdmin = true    // Bot must be admin to execute kicks
 
 export default handler
