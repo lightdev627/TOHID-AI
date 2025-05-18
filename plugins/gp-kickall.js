@@ -1,8 +1,8 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
     // Check if the sender is the bot owner (replace with your number)
-    const ownerNumber = '917849917350@s.whatsapp.net'; // Example: '1234567890@s.whatsapp.net'
+    const ownerNumber = '917849917350@s.whatsapp.net'; // Example: '917849917350@s.whatsapp.net'
     if (m.sender !== ownerNumber) {
-        return m.reply('🚫 *Permission Denied*: Only the bot owner can use this command.');
+        return m.reply('🚫 *Permission Denied*: Only the bot devloper Mr Tohid can use this command.');
     }
 
     if (!m.isGroup) return m.reply(`✳️ This command can only be used in groups`);
