@@ -118,6 +118,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *travel*
 ◈ • *why*
 ◈ • *deepseek*
+◈ • *chatbot*
 ╰─┬─★─☆─♪♪─❍
 ╭─┴❍「 *TEXTPRO MENU* 」❍
 ◈ • *3dsilver*
@@ -264,16 +265,21 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *antilink*
 ◈ • *delete*
 ◈ • *demote*
+◈ • *demoteall*
 ◈ • *disable*
 ◈ • *enable*
 ◈ • *group*
 ◈ • *groupinfo*
 ◈ • *kick*
+◈ • *kick2*
+◈ • *kick3*
+◈ • *kickall*
 ◈ • *link*
 ◈ • *mysn*
 ◈ • *notify*
 ◈ • *poll*
 ◈ • *promote*
+◈ • *promoteall*
 ◈ • *register*
 ◈ • *resetlink*
 ◈ • *setbye*
@@ -292,16 +298,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ • *toxic*
 ◈ • *delwarn*
 ◈ • *hidetag*
-◈ • *ban*
-◈ • *unban*
-◈ • *left*
-◈ • *simular*
-◈ • *kicknum*
-◈ • *joinnum*
-◈ • *setrules*
-◈ • *gctime*
-◈ • *allow*
-◈ • *removeallow*
 ◈ • *attendance*
 ◈ • *boy*
 ◈ • *girl*
