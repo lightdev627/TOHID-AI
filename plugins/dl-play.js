@@ -14,7 +14,8 @@ let handler = async (m, { conn, text, botname }) => {
 
     let link = video.url;
     let apis = [
-      `https://api-dark-shan-yt.koyeb.app/download/ytmp3_v5?url=${link}`
+      `https://vajiraapi-5ea329b6f243.herokuapp.com/download/ytmp3?url=${link}`,
+      `https://vajiraapi-5ea329b6f243.herokuapp.com/download/ytmp4?url=${link}`
     ];
 
     for (const api of apis) {
@@ -83,7 +84,7 @@ let handler = async (m, { conn, text, botname }) => {
     }
 
     // If all APIs fail
-    return m.reply("⚠️ An error occurred. All APIs might be down or unable to process the request.");
+    return m.reply("⚠️ An error occurred. The APIs might be down or unable to process the request.");
   } catch (error) {
     return m.reply("❌ Download failed\n" + error.message);
   }
