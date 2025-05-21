@@ -1,64 +1,85 @@
 import { createHash } from 'crypto'
+import PhoneNumber from 'awesome-phonenumber'
+import { canLevelUp, xpRange } from '../lib/levelling.js'
+import fetch from 'node-fetch'
+import fs from 'fs'
 import moment from 'moment-timezone'
 import { promises } from 'fs'
-import fs from 'fs'
+import { join } from 'path'
 
-const OwnerName = process.env.OWNER_NAME || 'TOHID KHAN';
-const BOTNAME = process.env.BOTNAME || 'TOHID-AI';
-const timeZone = process.env.TIME_ZONE || 'Asia/Kolkata';
-const time = moment.tz(timeZone).format('HH');
-let wib = moment.tz(timeZone).format('HH:mm:ss');
+// Constants
+const OWNER_NAME = process.env.OWNER_NAME || 'TOHID KHAN';
+const BOT_NAME = process.env.BOT_NAME || 'TOHID-AI';
+const TIME_ZONE = process.env.TIME_ZONE || 'Asia/Kolkata';
+const currentTime = moment.tz(TIME_ZONE).format('HH:mm:ss');
 
-// Video system
-let video = './assets/tohid.mp4'; // Your video path
-let videoThumb = './assets/tohid.jpg'; // Thumbnail for video
+// File Paths
+const videoPath = './assets/tohid.mp4';
+const videoThumbPath = './assets/tohid.jpg';
+const profilePicPath = './assets/tohid.jpg';
+const audioUrl = 'https://github.com/Tohidkhan6332/TOHID-AI/raw/main/assets/tohid.mp3';
+
+// Reactions
+const DONE_REACTION = '✅';
+const WARNING_REACTION = '⚠️';
 
 // Audio system
 const playMenuAudio = async (conn, m) => {
-    const audioUrl = 'https://github.com/Tohidkhan6332/TOHID-AI/raw/main/assets/tohid.mp3';
-    await conn.sendMessage(m.chat, { 
-        audio: { url: audioUrl },
-        mimetype: 'audio/mpeg',
-        ptt: false
-    }, { quoted: m });
+    try {
+        await conn.sendMessage(m.chat, { 
+            audio: { url: audioUrl },
+            mimetype: 'audio/mpeg',
+            ptt: false
+        }, { quoted: m });
+    } catch (error) {
+        console.error('Error sending audio:', error);
+    }
 };
 
-let handler = async (m, { conn, usedPrefix, command}) => {
-    let d = new Date(new Date + 3600000)
-    let locale = 'en'
-    let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
-    let _uptime = process.uptime() * 1000
-    let uptime = clockString(_uptime)
-    
-    let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-    if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-    
-    let user = global.db.data.users[who]
-    let { name, exp, role } = global.db.data.users[who]
-    let username = conn.getName(who)
-    let greeting = ucapan()
-    let quote = quotes[Math.floor(Math.random() * quotes.length)];
+let handler = async (m, { conn, usedPrefix, command }) => {
+    try {
+        let d = new Date(new Date + 3600000)
+        let locale = 'en'
+        let week = d.toLocaleDateString(locale, { weekday: 'long' })
+        let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
+        let _uptime = process.uptime() * 1000
+        let uptime = clockString(_uptime)
+        
+        let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+        if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
+        
+        let user = global.db.data.users[who]
+        let { name, exp, diamond, lastclaim, registered, regTime, age, level, role, warn } = user
+        let { min, xp, max } = xpRange(user.level, global.multiplier)
+        let username = conn.getName(who) || 'User'
+        let math = max - xp
+        let prem = global.prems.includes(who.split`@`[0])
+        let sn = createHash('md5').update(who).digest('hex')
+        let totaluser = Object.values(global.db.data.users).length 
+        let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
+        let greeting = ucapan()
+        let quote = quotes[Math.floor(Math.random() * quotes.length)]
 
-    let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-    let str = `
+        let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
+        let str = `
 🚀 *_Buckle up ${name}, ${greeting}! We're going on an adventure!_* 🚀
 📋 *_Quote of the day: ${quote}_* 📋
-◈╭──❍「 *USER INFO* 」❍
-◈├• 🦸 *Owner:* ${OwnerName}
+
+◈╭──❍「 USER INFO 」❍
+◈├• 🦸 *Owner:* ${OWNER_NAME}
 ◈├• 🏆 *Rank:* ${role}
 ◈├• 🎮 *XP:* ${exp} 
-◈├• 🎩 *USER*:${username}
+◈├• 🎩 *User:* ${username}
 ◈╰─┬─★─☆──♪♪─❍
-◈╭─┴❍「 *BOT STATUS* 」❍
-◈├• 📆  *Date:* ${date}
-◈├• ⏲️  *Time:* ${wib}
-◈├• 🤡  *Bot:* ${botname} 
-◈├• 📣  *Prefix:* ${usedPrefix} 
-◈├• 🕓  *Uptime:* ${uptime}
-◈├• 💌  *Database:* ${rtotalreg} of ${totaluser} 
-◈├• 📚  *Total Users:* ${totaluser}
+◈╭─┴❍「 BOT STATUS 」❍
+◈├• 📆 *Date:* ${date}
+◈├• ⏲️ *Time:* ${currentTime}
+◈├• 🤖 *Bot:* ${BOT_NAME} 
+◈├• #️⃣ *Prefix:* ${usedPrefix} 
+◈├• ⏱️ *Uptime:* ${uptime}
+◈├• 📊 *Database:* ${rtotalreg} of ${totaluser} 
 ◈╰─┬─★─☆──♪♪─❍
-◈╭─┴❍「 *MAIN MENU* 」❍
+◈╭─┴❍「 MAIN MENU 」❍
 ◈├• *allmenu*
 ◈├• *aimenu*
 ◈├• *aeditor*
@@ -91,47 +112,63 @@ let handler = async (m, { conn, usedPrefix, command}) => {
 ◈├• *toolsmenu*
 ◈├• *ownermenu*
 ◈├• *setprivacy*
+◈├• *studymenu*
+◈├• *quranmenu*
 ◈╰─♪♪─★─☆──♪♪─❍
-© *TOHID-AI*
 
-> 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
+© ${BOT_NAME}
+
+> 💡 *Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help*
 `
 
-    // Send media with multiple options
-    try {
         // Send audio first
         await playMenuAudio(conn, m);
-        
-        // Then send video with thumbnail
-        await conn.sendMessage(m.chat, {
-            video: { url: video },
-            caption: str,
-            thumbnail: await fs.promises.readFile(videoThumb),
-            gifPlayback: true,
-            contextInfo: {
-                mentionedJid: [m.sender],
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363207624903731@newsletter',
-                    newsletterName: 'TOHID-AI MENU',
-                    serverMessageId: 143
+
+        // Check if video file exists
+        let videoExists = false;
+        try {
+            await fs.promises.access(videoPath);
+            videoExists = true;
+        } catch {
+            console.log('Video file not found');
+        }
+
+        // Send video if available, otherwise send as image
+        if (videoExists) {
+            await conn.sendMessage(m.chat, {
+                video: { url: videoPath },
+                caption: str,
+                thumbnail: await fs.promises.readFile(videoThumbPath),
+                gifPlayback: true,
+                contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363207624903731@newsletter',
+                        newsletterName: `${BOT_NAME} MENU`,
+                        serverMessageId: 143
+                    }
                 }
-            }
-        }, { quoted: m });
-        
-        m.react('✅');
+            }, { quoted: m });
+        } else {
+            // Fallback to image
+            await conn.sendFile(m.chat, profilePicPath, 'profile.jpg', str, m, null, { 
+                thumbnail: await fs.promises.readFile(videoThumbPath).catch(() => null) 
+            });
+        }
+
+        m.react(DONE_REACTION);
     } catch (error) {
-        console.error('Error sending media:', error);
-        // Fallback to simple text if media fails
-        await conn.sendMessage(m.chat, { text: str }, { quoted: m });
-        m.react('⚠️');
+        console.error('Error in menu handler:', error);
+        await conn.sendMessage(m.chat, { text: "⚠️ An error occurred while processing your request. Please try again later." }, { quoted: m });
+        m.react(WARNING_REACTION);
     }
 }
 
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['menu', 'help'] 
+handler.command = ['menu', 'help', 'm'] 
 
 export default handler
 
@@ -143,23 +180,16 @@ function clockString(ms) {
 }
 
 function ucapan() {
-    const time = moment.tz('Asia/Kolkata').format('HH')
-    let res = "happy early in the day☀️"
-    if (time >= 4) {
-        res = "Good Morning 🌄"
-    }
-    if (time >= 10) {
-        res = "Good Afternoon ☀️"
-    }
-    if (time >= 15) {
-        res = "Good Afternoon 🌇"
-    }
-    if (time >= 18) {
-        res = "Good Night 🌙"
-    }
+    const time = moment.tz(TIME_ZONE).format('HH')
+    let res = "Happy early in the day ☀️"
+    if (time >= 4) res = "Good Morning 🌄"
+    if (time >= 10) res = "Good Afternoon ☀️"
+    if (time >= 15) res = "Good Afternoon 🌇"
+    if (time >= 18) res = "Good Night 🌙"
     return res
-    }
-    const quotes = [
+}
+
+const quotes = [
       "I'm not lazy, I'm just on my energy saving mode.",
       "Life is short, smile while you still have teeth.",
       "I may be a bad influence, but darn I am fun!",
