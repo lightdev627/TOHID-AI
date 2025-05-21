@@ -14,18 +14,11 @@ const time = moment.tz(timeZone).format('HH');
 let wib = moment.tz(timeZone).format('HH:mm:ss');
 
 // Video system
+let pp = './assets/A.jpg'
 let video = './assets/tohid.mp4'; // Your video path
 let videoThumb = './assets/tohid.jpg'; // Thumbnail for video
 
-// Audio system
-const playMenuAudio = async (conn, m) => {
-    const audioUrl = 'https://github.com/Tohidkhan6332/TOHID-AI/raw/main/assets/tohid.mp3';
-    await conn.sendMessage(m.chat, { 
-        audio: { url: audioUrl },
-        mimetype: 'audio/mpeg',
-        ptt: false
-    }, { quoted: m });
-};
+
 
 let handler = async (m, { conn, usedPrefix, command}) => {
     let d = new Date(new Date + 3600000)
@@ -36,7 +29,7 @@ let handler = async (m, { conn, usedPrefix, command}) => {
     let uptime = clockString(_uptime)
 let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-let pp = './assets/A.jpg'
+
 let user = global.db.data.users[who]
 let { name, exp, diamond, lastclaim, registered, regTime, age, level, role, warn } = global.db.data.users[who]
 let { min, xp, max } = xpRange(user.level, global.multiplier)
@@ -131,6 +124,16 @@ try {
             }
         }
     }, { quoted: m });
+    
+    // Audio system
+const playMenuAudio = async (conn, m) => {
+    const audioUrl = 'https://github.com/Tohidkhan6332/TOHID-AI/raw/main/assets/tohid.mp3';
+    await conn.sendMessage(m.chat, { 
+        audio: { url: audioUrl },
+        mimetype: 'audio/mpeg',
+        ptt: false
+    }, { quoted: m });
+};
     
     // Also send as image fallback
     await conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, null, { thumbnail: await fs.promises.readFile(videoThumb) });
