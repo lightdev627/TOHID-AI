@@ -69,6 +69,6 @@ let handler = async (m) => {
 
 handler.help = ["vv"];
 handler.tags = ["tools"];
-handler.command = ["vv", "view"];
+handler.command = ["vv3", "view3"];
 
 export default handler;
