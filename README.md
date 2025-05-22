@@ -3,7 +3,7 @@
 
 <p align="center">  
   <a href="https://youtube.com/@tohidkhan_6332">
-    <img alt="TOHID" src="https://i.imgur.com/WnKjrJt.jpeg">
+    <vid alt="TOHID" src="https://files.catbox.moe/lnqhn4.mp4">
   </a>
 </p>
 <p align="center">
